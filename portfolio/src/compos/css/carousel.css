@@ -1,0 +1,25 @@
+.slide {
+    position: relative;
+}
+
+.carousel-img {
+    height: 80vh;
+    object-position: center;
+    object-fit: cover;
+}
+
+.carousel-btn-groups {
+    position: absolute;
+    width: 100%;
+    bottom: 1.5vmin;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+    padding: 1rem;
+}
+
+.carousel-title {
+    position: absolute;
+    width: 100%;
+    top: 100px;
+}

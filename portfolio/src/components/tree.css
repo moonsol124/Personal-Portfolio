@@ -1,0 +1,300 @@
+
+.tree {
+    position: absolute;
+    width: 4vmin;
+    height: 50vmin;
+    background-color: brown;
+    background-image: linear-gradient(to top, rgb(109, 23, 23) 0%, rgb(97, 7, 7) 100%);
+    border-radius: 180% 100% 50% 100%;
+    bottom: 30px;
+    z-index: 1;
+    left: 35%;
+  }
+  
+  .branch-1 {
+    position: absolute;
+    width: 2vmin;
+    height: 15vmin;
+    background-color: rgb(109, 23, 23);
+    transform: translateX(5vmin) translateY(7vmin) rotate(45deg);
+    border-radius: 180% 100% 50% 100%;
+    z-index: 1;
+  }
+  
+  .branch-2 {
+    position: absolute;
+    width: 2vmin;
+    height: 18vmin;
+    background-color: rgb(109, 23, 23);
+    transform: translateX(-4vmin) translateY(7vmin) rotate(-45deg);
+    border-radius: 180% 100% 50% 100%;
+    z-index: 1;
+  }
+  
+  .branch-3 {
+    position: absolute;
+    width: 2vmin;
+    height: 10vmin;
+    background-color: rgb(109, 23, 23);
+    transform: translateX(4vmin) translateY(3vmin) rotate(60deg);
+    border-radius: 180% 100% 50% 100%;
+    z-index: 1;
+  }
+  
+  .branch-4 {
+    position: absolute;
+    width: 2vmin;
+    height: 6vmin;
+    background-color: rgb(109, 23, 23);
+    transform: translateX(-2vmin) translateY(2vmin) rotate(-45deg);
+    border-radius: 180% 100% 50% 100%;
+    z-index: 1;
+  }
+  
+  .branch-5 {
+    position: absolute;
+    width: 2vmin;
+    height: 8vmin;
+    background-color: rgb(109, 23, 23);
+    transform: translateX(-3vmin) translateY(5vmin) rotate(-60deg);
+    border-radius: 180% 100% 50% 100%;
+    z-index: 1;
+  }
+  
+  .leave-1,
+  .leave-2,
+  .leave-3,
+  .leave-4,
+  .leave-5,
+  .leave-6,
+  .leave-7,
+  .leave-8,
+  .leave-9,
+  .leave-10,
+  .leave-11 {
+    width: 4vmin;
+    height: 4vmin;
+    position: absolute;
+    background-color: rgba(51, 83, 44, 0.76);
+    filter: blur(1px);
+    border-radius: 100%;
+    z-index: 3;
+  }
+  
+  .leave-1::before,
+  .leave-2::before,
+  .leave-3::before,
+  .leave-4::before,
+  .leave-5::before,
+  .leave-6::before,
+  .leave-7::before,
+  .leave-8::before,
+  .leave-9::before,
+  .leave-10::before,
+  .leave-11::before 
+  {
+    content: '';
+    width: 4vmin;
+    height: 4vmin;
+    position: absolute;
+    background-color: rgba(151, 185, 112, 0.76);
+    /* filter: blur(1px); */
+    border-radius: 100%;
+    z-index: 3;
+  }
+  
+  .leave-1::after,
+  .leave-2::after,
+  .leave-3::after,
+  .leave-4::after,
+  .leave-5::after,
+  .leave-6::after,
+  .leave-7::after,
+  .leave-8::after,
+  .leave-9::after,
+  .leave-10::after,
+  .leave-11::after {
+    content: '';
+    width: 4vmin;
+    height: 4vmin;
+    position: absolute;
+    background-color: rgba(198, 204, 109, 0.788);
+    filter: blur(1px);
+    border-radius: 100%;
+    z-index: 3;
+  }
+  
+  .leave-1 {
+    bottom: 20px;
+    left: 4vmin;
+  }
+  
+  .leave-1::before {
+    bottom: 2vmin;
+    left: 3vmin;
+    background-color: rgba(228, 183, 241, 0.788);
+  }
+  
+  .leave-1::after {
+    bottom: 2vmin;
+    left: -3vmin;
+  }
+
+  .leave-2 {
+    bottom: 20px;
+    right: 4vmin;
+  }
+
+  .leave-2::before {
+    bottom: 2vmin;
+    background-color: rgba(228, 183, 241, 0.788);
+    left: 3vmin;
+  }
+  
+  .leave-2::after {
+    bottom: 2vmin;
+    left: -3vmin;
+  }
+
+  .leave-3 {
+    bottom: 13vmin;
+    right: 6vmin;
+    background-color: rgba(228, 183, 241, 0.788);
+  }
+
+  .leave-3::before {
+    bottom: 2vmin;
+    background-color: rgba(228, 183, 241, 0.788);
+    left: 3vmin;
+  }
+  
+  .leave-3::after {
+    bottom: 2vmin;
+    left: -3vmin;
+  }
+
+  .leave-4 {
+    bottom: 3vmin;
+    left: 6vmin;
+  }
+
+  .leave-4::before {
+    bottom: 2vmin;
+    left: 3vmin;
+    background-color: rgba(228, 183, 241, 0.788);
+  }
+  
+  .leave-4::after {
+    bottom: 2vmin;
+    left: -3vmin;
+  }
+
+  .leave-5 {
+    bottom: 14vmin;
+    left: 5vmin;
+  }
+
+  .leave-5::before {
+    background-color: rgba(228, 183, 241, 0.788);
+    bottom: 2vmin;
+    left: 3vmin;
+  }
+  
+  .leave-5::after {
+    bottom: 2vmin;
+    left: -3vmin;
+  }
+
+  .leave-6 {
+    bottom: 15vmin;
+    right: 5vmin;
+  }
+
+  .leave-6::before {
+    bottom: 2vmin;
+    right: 3vmin;
+    background-color: rgba(228, 183, 241, 0.788);
+  }
+  
+  .leave-6::after {
+    bottom: 2vmin;
+    right: -3vmin;
+  }
+
+  .leave-7 {
+    bottom: 19vmin;
+    right: 4vmin;
+    background-color: rgba(228, 183, 241, 0.788);
+  }
+
+  .leave-7::before {
+    bottom: 2vmin;
+    right: 3vmin;
+  }
+  
+  .leave-7::after {
+    bottom: 2vmin;
+    right: -3vmin;
+  }
+
+  .leave-8 {
+    bottom: 18vmin;
+    left: 4vmin;
+  }
+
+  .leave-8::before {
+    bottom: 2vmin;
+    left: 3vmin;
+  }
+  
+  .leave-8::after {
+    bottom: 2vmin;
+    left: -3vmin;
+    background-color: rgba(228, 183, 241, 0.788);
+  }
+
+  .leave-9 {
+    bottom: 20vmin;
+    left: 3vmin;
+  }
+
+  .leave-9::before {
+    bottom: 2vmin;
+    left: 3vmin;
+  }
+  
+  .leave-9::after {
+    bottom: 2vmin;
+    left: -3vmin;
+    background-color: rgba(228, 183, 241, 0.788);
+  }
+
+  .leave-10 {
+    bottom: 23vmin;
+    right: 3vmin;
+  }
+
+  .leave-10::before {
+    bottom: 2vmin;
+    right: 3vmin;
+  }
+  
+  .leave-10::after {
+    bottom: 2vmin;
+    right: -3vmin;
+  }
+  .leave-11 {
+    bottom: 25vmin;
+    right: 3vmin;
+  }
+
+  .leave-11::before {
+    bottom: 2vmin;
+    right: 3vmin;
+    background-color: rgba(228, 183, 241, 0.788);
+  }
+  
+  .leave-11::after {
+    bottom: 2vmin;
+    right: -3vmin;
+  }

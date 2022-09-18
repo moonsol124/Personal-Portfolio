@@ -1,0 +1,15 @@
+.projects-menu-container {
+    padding: 1rem;
+}
+
+.projects-menu::before {
+    content: '';
+    background-image: repeating-conic-gradient(#e8a4ac 0% 25%, #d8e5e3 0% 50%);
+    background-position: 0 0, 23px 23px;
+    background-size: 46px 46px;
+    background-color: #d8e5e3;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: .1;
+}

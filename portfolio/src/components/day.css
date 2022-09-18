@@ -1,0 +1,391 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav {
+  position: absolute;
+  background-color: red;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+.container {
+  background-image: -webkit-radial-gradient(50% 10%, circle, white 1%, rgb(255, 255, 103) 2%, rgb(255, 255, 111) 4%, rgba(242, 248, 247, 1) 7%, rgba(242, 248, 247, 1) 10%, rgb(103, 199, 255) 40%, rgb(43, 138, 255) 100%);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.shadow {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+  transform-origin: left;
+  transition: 0.5s;
+  background-color: rgba(43, 51, 59, 0.8)
+}
+
+.one {
+  z-index: -1;
+  opacity: 0.15;
+}
+
+.menu {
+  display: flex;
+
+}
+
+.two {
+  z-index: -2;
+  opacity: 0.1;
+}
+
+/*  when toggled */
+.main-toggle {
+  transform: perspective(1000px) rotateY(20deg) translateZ(50vmin) scale(0.5);
+}
+
+.one-toggle {
+  transform: perspective(1300px) rotateY(20deg) translateZ(30vmin) scale(0.5);
+
+}
+
+.two-toggle {
+  transform: perspective(1300px) rotateY(20deg) translateZ(15vmin) scale(0.5);
+}
+
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(43, 51, 59, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner {
+  position: absolute;
+  background-color: red;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+
+header {
+  min-height: 100vh;
+  width: 100%;
+  /* background: url(https://i.postimg.cc/vHtXVqkr/bg.jpg) no-repeat top center / cover; */
+  position: relative;
+}
+
+.beach {
+  position: absolute;
+  width: 100%;
+  height: 230px;
+  bottom: 0;
+  display: grid;
+  background-color: white;
+  overflow: hidden;
+  background-position: center;
+  z-index: 1;
+  /* grid-template-rows: repeat(4, 1fr); */
+  /* background-repeat: no-repeat;   
+  background: -webkit-linear-gradient(top, rgba(8,122,193,1) 0%, rgba(18,156,192,1) 15%, rgba(42,212,229,1) 35%, rgba(150,233,239,1) 45%, rgba(222,236,211,1) 55%, white 65%, #ecc075 100%);
+   */
+  /* border-radius: 180% 180% 0% 0%; */
+}
+
+
+.sea {
+  height: 150px;
+  width: 200%;
+  left: -50%;
+  /* top:40%; */
+  border-radius: 0 0 50% 50%;
+  background: linear-gradient(to bottom, rgba(8, 122, 193, 1) 0%, rgba(18, 156, 192, 1) 25%, rgba(42, 212, 229, 1) 50%, rgba(150, 233, 239, 1) 75%, rgba(222, 236, 211, 1) 100%);
+  animation: waveanim ease-in-out 10s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 0%;
+  overflow: hidden;
+  position: relative;
+}
+
+.seafoam {
+  width: 100%;
+  height: 50px;
+  top: 37%;
+  background: linear-gradient(to bottom, transparent 0%, transparent 80%, transparent 90%, white 100%);
+  animation: seafoamanim ease-in-out 10s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+
+.sand {
+  height: 70px;
+  width: 100%;
+  background: #fdf1d7;
+  top: 90%;
+  position: absolute;
+}
+
+.sand-front {
+  height: 100px;
+  width: 100%;
+  background: #fdf1d7;
+  top: 100%;
+  position: absolute;
+}
+
+.wet-sand {
+  height: 40px;
+  width: 200%;
+  left: -50%;
+  top: 70%;
+  border-radius: 0 0 50% 50%;
+  background: #ecc075;
+  box-shadow: 0 10px 10px 0 #ecc075;
+  animation: wetsandanim ease-in-out 10s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+@keyframes waveanim {
+  0% {
+    transform: scaleY(1.00);
+  }
+
+  35% {
+    transform: scaleY(1.3);
+  }
+
+  69% {
+    transform: scaleY(1.00);
+  }
+
+  100% {
+    transform: scaleY(1.00);
+  }
+}
+
+@keyframes wetsandanim {
+  0% {
+    opacity: 0.2;
+  }
+
+  34% {
+    opacity: 0.2;
+  }
+
+  35% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 0.2;
+  }
+}
+
+
+@keyframes seafoamanim {
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.birds {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 18%;
+  animation: bird-flying infinite 10s linear;
+}
+
+@keyframes bird-flying {
+  0% {
+    transform: translateX(100vw);
+  }
+
+  100% {
+    transform: translateX(-20vw);
+  }
+}
+
+.island {
+  width: 60vmin;
+  height: 140px;
+  border-radius: 100% 100% 0% 0%;
+  background: #eb4;
+  background-image: linear-gradient(to top, #eb4 80%, #962 100%);
+  position: absolute;
+  right: 2vmin;
+  bottom: 120px;
+  box-shadow: inset -10px 0 10px -10px black;
+}
+
+.island::before {
+  content: '';
+  width: 60vmin;
+  height: 20px;
+  border-radius: 100% 100% 0% 0%;
+  background: #eb4;
+  background-image: linear-gradient(to top, #eb4 80%, #962 100%);
+  position: absolute;
+  bottom: 95px;
+  opacity: 0.4;
+  z-index: 2;
+  transform: rotateZ(180deg) rotateX(40deg) rotateY(180deg) scale(0.8);
+  box-shadow: inset -10px 0 10px -10px black;
+}
+
+.house {
+  width: 40vmin;
+  height: 40vmin;
+  /* height: 330px; */
+  position: absolute;
+  right: 12vmin;
+  /* bottom: 0; */
+  bottom: 230px;
+  padding: 1vmin;
+}
+
+.grassField {
+  width: 100%;
+  height: 35vmin;
+  bottom: 0vmin;
+  position: absolute;
+  z-index: 2;
+}
+
+.grass, 
+.grass-1,
+.grass-2,
+.grass-3 {
+  position: absolute;
+  width: 40vmin;
+  height: 45vmin;
+  bottom: -15vmin;
+}
+
+.grass-1 {
+  left: -15vmin;
+}
+
+.grass-2 {
+  left: 15vmin;
+}
+
+.grass-3 {
+  left: 40vmin;
+}
+.tree {
+  position: absolute;
+  bottom: 0;
+  left: 20vmin;
+  width: 60vmin;
+  height: 60vmin;
+}
+
+.leaves-top
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50vmin;
+}
+
+.leaves2,
+.leaves2-1 {
+  position: absolute;
+  width: 35vmin;
+  width: 35vmin;
+}
+
+.leaves2-1 {
+  transform: rotateZ(-25deg);
+}
+
+.leaves-right {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50vmin;
+  z-index: 2;
+}
+
+.leaves,
+.leaves-1,
+.leaves-2 {
+  position: absolute;
+  width: 35vmin;
+  height: 35vmin;
+  right: -10vmin;
+  z-index: 2;
+}
+
+.leaves-1 {
+  transform: translateY(15vmin) rotateZ(-45deg);
+}
+
+.leaves-2 {
+  transform: translateY(-5vmin) rotateZ(-65deg);
+}
+
+.paper {
+  width: 20vmin;
+  height: 20vmin;
+  position: absolute;
+  right: 10vmin;
+  bottom: 0;
+  z-index: 2;
+  transform: rotateX(50deg) rotateZ(200deg);
+}

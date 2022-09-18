@@ -1,0 +1,24 @@
+.nav {
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    /* width: 100%; */
+    /* z-index: -1; */
+}
+
+.menu-btn {
+    position: fixed;
+    top: 5vmin;
+    right: 5vmin;
+    z-index: 999;
+}
+
+.logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+}
+
+.canvas {
+    height: 100vh;
+}
