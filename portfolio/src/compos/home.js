@@ -13,7 +13,7 @@ function Home(props) {
   const aboutText = {'string': 'some text', 'count': 0};
   const projectText = {'string': 'some text', 'count': 0};
   const projectsHeader = {'string': 'PROJECTS', 'count': 0};
-  const headerTitle = {'string': 'Chocolate is Delicious', 'count': 0};
+  const headerTitle = {'string': 'Chocolate', 'count': 0};
 
   useEffect(()=>{
     animateHeader();
@@ -25,9 +25,16 @@ function Home(props) {
 
   function animateHeader() {
     const headerTitle = Array.from((document.getElementById('header-title')).children);
-    headerTitle.forEach((letter)=>{
-      letter.classList.add('scales')
-    })
+    setInterval(() => {
+      for (let i = 0; i < 3; i++) {
+        const randomInt = Math.floor(Math.random() * headerTitle.length);
+        const span = headerTitle[randomInt];
+        span.classList.add('shakeLetter');
+        setTimeout(() => {
+          headerTitle[randomInt].classList.remove('shakeLetter');
+        }, 300)
+      }
+    }, 3000)
   }
 
   function handlesPackman(e) {
@@ -45,27 +52,24 @@ function Home(props) {
         <div className='header-title'>
           <div className="big-letters-container-home">
             <ul className="big-letters-container-home-ul">
-              <li> word 1</li>
-              <li> word 2</li>
-              <li> word 3</li>
-              <li> word 4</li>
+              <li> <p className="neon">HI</p></li>
+              <li> <p className="neon">HOLA</p></li>
+              <li> <p className="neon">HOI</p></li>
+              <li> <p className="neon">ANNYEONG</p></li>
             </ul>
           </div>
-          <div className='text-box-1' style={{justifyItems: 'end'}}>
-            <h2 style={{width: '60%', display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-end'}} id="header-title"> 
+          <div>
+            <h2 style={{width: '100%', whiteSpace:'pre', display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-end'}} id="header-title"> 
             {(Array.from(headerTitle.string)).map((letter)=>{
                   if (letter === ' ') {
                     return <span> &nbsp; </span>
                   } 
                   else {
                     headerTitle.count = increaseCount(headerTitle);
-                    return <span style={{ animationDelay: `${headerTitle.count}s`}}> {letter} </span>  
+                    return <span> {letter} </span>  
                   }
               })}  
             </h2>
-            <div style={{display: 'flex', justifyContent: 'flex-end'}}>
-              <div className="line-right"></div>
-            </div>
           </div>
           <div className='text-box-2'>
             <div style={{display: 'flex', justifyContent: 'flex-start'}}>
@@ -123,7 +127,8 @@ function Home(props) {
                 We walked through the forest, rivers and mountains and we survived!
               </p>
             </div>
-            <div className="packMan-div">
+          </div>
+          <div className="packMan-div">
               <div className="packMan-line"></div>
               <div className="packMan"></div>
               <div className='packMan-btn-container'>
@@ -139,7 +144,6 @@ function Home(props) {
                 </button>
               </div>
             </div>
-          </div>
         </div>
       </div> 
       <hr></hr>
@@ -181,7 +185,7 @@ function Home(props) {
               <Carousel />
             </div>
             <div className="projects-btn-group">
-              <button> VIEW ALL PROJECTS </button>
+              <button className='button'> VIEW ALL PROJECTS </button>
             </div>
             <div className="projects-img-2"></div>
           </div>

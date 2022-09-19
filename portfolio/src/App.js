@@ -19,11 +19,20 @@ function App() {
     else {
       setMenuToggled(false);
     }
-    console.log (menuToggled);
   }
 
-  const closesMenu = () => {
+  const closesMenu = (e) => {
+    console.log (e.target);
     setMenuToggled(false);
+  }
+
+  function handlesPackman(e) {
+    const packman = document.getElementById('contact-packman');
+    packman.classList.add('animatePackman');
+    const letters = Array.from(e.target.children);
+    letters.forEach((letter) => {
+      letter.classList.add('hideLetter');
+    })
   }
 
   function onScroll(e) {
@@ -62,7 +71,7 @@ function App() {
   return (
         <BrowserRouter>
           <div className="app" onScroll={onScroll}>
-            {(menuToggled)?<Menu closesMenu={closesMenu}/>:null}
+            {(menuToggled)?<Menu menuToggled={menuToggled} closesMenu={closesMenu}/>:null}
             <Nav handlesMenuBtn={handlesMenuBtn} />
               <Routes>
                   <Route path='/' element={<Home />}></Route>
@@ -82,8 +91,20 @@ function App() {
                   <p> Mexico City, Mexico</p>
                   <p> copyright 2022 </p>
                 </div>
-              <div className="contact-btns">
-                  <button> Say Hi! </button>
+                <div className="packMan-div">
+                <div className="packMan-line"></div>
+                <div className="packMan" id='contact-packman'></div>
+                <div className='packMan-btn-container'>
+                  <button className='packMan-btn' onClick={handlesPackman}> 
+                    <span className='packMan-letter' style={{animationDelay: '.05s', transform: 'rotateZ(15deg)'}}>C</span>
+                    <span className='packMan-letter' style={{animationDelay: '.1s'}}>O</span>
+                    <span className='packMan-letter' style={{animationDelay: '.15s'}}>N</span>
+                    <span className='packMan-letter' style={{animationDelay: '.20s', transform: 'rotateZ(-15deg)'}}>T</span>
+                    <span className='packMan-letter' style={{animationDelay: '.25s'}}>A</span>
+                    <span className='packMan-letter' style={{animationDelay: '.30s', transform: 'rotateZ(15deg)'}}>C</span>
+                    <span className='packMan-letter' style={{animationDelay: '.35s'}}>T</span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
