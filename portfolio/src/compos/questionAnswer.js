@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './css/about.css';
+import lockIcon from './imgs/open-padlock.png'
 
 function Answer(props) {
 
     return (
-        <div>
+        <div className="answer">
             {props.a}
         </div>
     )
@@ -25,12 +26,16 @@ function Question(props) {
     return (
         <div className="questionAnswer">
             <div className="question">
-                <h2> {props.q} </h2>
+                <p> {props.id}. </p>
+                <p className="question-p"> {props.q} </p>
                 {(props.id === props.curQA)?null:
-                <button onClick={()=>{return opensQuestion(props.id)}}> open </button>}
+                <div className="question-answer-btn-group">
+                    <img src={lockIcon} alt="open" className="lockIcon" onClick={()=>{return opensQuestion(props.id)}}/>
+                </div>
+                }
             </div>
             {(toggled)?
-            <div className="answer">
+            <div className="answer-container">
                 {(props.id === props.curQA)?<Answer a={props.a}/>:null}
             </div>
             :null}

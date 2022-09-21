@@ -26,7 +26,8 @@ a:hover {
 
 :root {
     font-size: 25px;
-    --pink: #e8a4ac;
+    /* --pink: #e8a4ac; */
+    --pink: pink;
     --white: #FFF6F0;
     --orange: RGB(255, 164, 0);
 }

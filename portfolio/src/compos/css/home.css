@@ -276,9 +276,6 @@
 
 .projects::before {
     content: '';
-    /* background-image: repeating-conic-gradient(var(--orange) 0% 25%, white 0% 50%);
-    background-position: 0 0, 23px 23px;
-    background-size: 46px 46px; */
     background-color: var(--white);
     position: absolute;
     width: 100%;
@@ -302,7 +299,7 @@
     content: '';
     position: absolute;
     width: 100%;
-    background-color: #e8a4ac;
+    background-color: pink;
     height: 100%;
     clip-path: circle(100% at -120% 50%);
 }

@@ -24,13 +24,11 @@ function Menu(props) {
         divs.forEach((div) => {
             const children = Array.from((div.children));
             setInterval(() => {
-                for (let i = 0; i < 1; i++) {
-                    const randomInt = Math.floor(Math.random() * children.length);
-                    children[randomInt].classList.add('shakeLetter');
-                    setTimeout(() => {
-                        children[randomInt].classList.remove('shakeLetter');
-                    }, 500)
-                }
+                const randomInt = Math.floor(Math.random() * children.length);
+                children[randomInt].classList.add('shakeLetter');
+                setTimeout(() => {
+                    children[randomInt].classList.remove('shakeLetter');
+                }, 500)
             }, 2000)
         })
     }
@@ -38,7 +36,7 @@ function Menu(props) {
     return (
         <div className="menu">
             <div className='menu-container'>
-                <div className="big-letters-container">
+                <div className="big-letters-container" style={{padding: '.5rem'}}>
                     <p className='super-big-letters-menu'> MENU </p>
                     <p className="big-letters-menu">MENU</p>
                 </div>
