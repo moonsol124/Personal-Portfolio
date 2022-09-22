@@ -20,7 +20,7 @@
         clip-path: inset(-55% -30% -45% -40%);
     }
     to {
-        clip-path: inset(5% 20% 15% 10%);
+        clip-path: inset(25% 5% 5% 5%);
     }
 }
 
@@ -76,7 +76,7 @@
     justify-content: center;
     gap: 1rem;
     z-index: 1;
-    margin-bottom: 15vmin;
+    /* margin-bottom: 15vmin; */
     position: relative;
 }
 

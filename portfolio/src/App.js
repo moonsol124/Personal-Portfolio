@@ -1,6 +1,6 @@
 import './index.css';
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, useNavigate } from "react-router-dom";
 import Nav from './compos/nav';
 import Home from './compos/home';
 import About from './compos/about';
@@ -8,6 +8,7 @@ import Contact from './compos/contact';
 import Projects from './compos/projects';
 import Menu from './compos/menu';
 import Canvas from './compos/canvas';
+import Footer from './footer';
 
 function App() {
   const [menuToggled, setMenuToggled] = useState(false);
@@ -17,7 +18,9 @@ function App() {
       setMenuToggled(true);
     }
     else {
-      setMenuToggled(false);
+      setTimeout(()=>{
+        setMenuToggled(false);
+      }, 2000)
     }
   }
 
@@ -80,33 +83,7 @@ function App() {
                   <Route path='/projects' element={<Projects/>}></Route>
                   <Route path='/canvas' element={<Canvas/>}></Route>
               </Routes>
-              <div className="contact">
-                <div className="contact-title">
-                    <h2 className="titleId"> Contact </h2>
-                    <h2> Want to get in touch? </h2>
-                    <p> lucas@gmail.com</p>
-                </div>
-                <div>
-                  <p> Lucas Sanchez </p>
-                  <p> Mexico City, Mexico</p>
-                  <p> copyright 2022 </p>
-                </div>
-                <div className="packMan-div">
-                <div className="packMan-line"></div>
-                <div className="packMan" id='contact-packman'></div>
-                <div className='packMan-btn-container'>
-                  <button className='packMan-btn' onClick={handlesPackman}> 
-                    <span className='packMan-letter' style={{animationDelay: '.05s', transform: 'rotateZ(15deg)'}}>C</span>
-                    <span className='packMan-letter' style={{animationDelay: '.1s'}}>O</span>
-                    <span className='packMan-letter' style={{animationDelay: '.15s'}}>N</span>
-                    <span className='packMan-letter' style={{animationDelay: '.20s', transform: 'rotateZ(-15deg)'}}>T</span>
-                    <span className='packMan-letter' style={{animationDelay: '.25s'}}>A</span>
-                    <span className='packMan-letter' style={{animationDelay: '.30s', transform: 'rotateZ(15deg)'}}>C</span>
-                    <span className='packMan-letter' style={{animationDelay: '.35s'}}>T</span>
-                  </button>
-                </div>
-              </div>
-            </div>
+              <Footer />
           </div>
         </BrowserRouter>
   )

@@ -22,3 +22,10 @@
 .canvas {
     height: 100vh;
 }
+
+.home-btn {
+    position: fixed;
+    top: 5vmin;
+    left: 5vmin;
+    z-index: 999;
+}

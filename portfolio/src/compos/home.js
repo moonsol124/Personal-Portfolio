@@ -7,8 +7,10 @@ import bg3 from './imgs/bg3.gif'
 import bg4 from './imgs/bg4.gif'
 import Carousel from './carousel';
 import Text from './text';
+import { useNavigate } from "react-router-dom";
 
 function Home(props) {
+  const navigate = useNavigate();
   const aboutHeader = {'string': 'ABOUT', 'count': 0};
   const aboutText = {'string': 'some text', 'count': 0};
   const projectText = {'string': 'some text', 'count': 0};
@@ -44,6 +46,9 @@ function Home(props) {
     letters.forEach((letter) => {
       letter.classList.add('hideLetter');
     })
+    setTimeout(() => {
+      navigate('/about');
+    }, 1000);
   }
 
   return (
@@ -80,11 +85,11 @@ function Home(props) {
             </p>
           </div>
         </div>
-        <img className="header-img-1" src={bg1} alt="bg-1"/>
-        <img className="header-img-2" src={bg2} alt="bg-2"/>
+        <div className="header-img-1"></div>
+        <div className="header-img-2"></div>
       </div>
       <hr></hr>
-      <div className="about" style={{backgroundImage: `url(${bg3})`}}>
+      <div className="about">
         <div className="about-container">
           <div className='about-title'>
           <div className="big-letters-container">
@@ -136,7 +141,7 @@ function Home(props) {
                   <span className='packMan-letter' style={{animationDelay: '.05s', transform: 'rotateZ(15deg)'}}>S</span>
                   <span className='packMan-letter' style={{animationDelay: '.1s'}}>E</span>
                   <span className='packMan-letter' style={{animationDelay: '.15s'}}>E</span>
-                  <span>&nbsp;</span>
+                  {/* <span>&nbsp;</span> */}
                   <span className='packMan-letter' style={{animationDelay: '.20s', transform: 'rotateZ(-15deg)'}}>M</span>
                   <span className='packMan-letter' style={{animationDelay: '.25s'}}>O</span>
                   <span className='packMan-letter' style={{animationDelay: '.30s', transform: 'rotateZ(15deg)'}}>R</span>
@@ -191,6 +196,7 @@ function Home(props) {
           </div>
           <hr></hr>
         </div>
+        {/* <Footer /> */}
     </div>
   )
 }

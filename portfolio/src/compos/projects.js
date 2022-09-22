@@ -16,9 +16,9 @@ function Projects() {
     }
 
     return (
-        <div className="about-menu">
-            <div className="about-menu-header">
-                <div className="big-letters-container">
+        <div className="projects-menu">
+            <div className="about-menu-header" style={{marginTop: '0'}}>
+                <div className="big-letters-container" style={{marginTop: '35vmin'}}>
                     <p className='super-big-letters-about' style={{color: 'rgba(255, 164, 0, 0.5)'}}> PROJECTS</p>
                     <p className="big-letters" style={{zIndex: '1'}}>
                         PROJECTS
@@ -32,6 +32,7 @@ function Projects() {
                     })}
                 </div>
             </div>
+            {/* <Footer /> */}
         </div>
     )
 }

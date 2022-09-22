@@ -4,6 +4,10 @@
     position: relative;
     background-color: rgba(255, 164, 0, 0);
     z-index: 1;
+    background-color: rgba(255, 192, 203, .5);
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin-top: 15vmin;
 }
 
 .project::before {
@@ -11,7 +15,7 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: pink;
+    /* background-color: pink; */
     z-index: -1;
     /* clip-path: polygon(50% 0%, 83% 12%, 0 64%, 94% 78%, 68% 100%, 32% 100%, 0 70%, 0% 43%, 17% 12%); */
 }
@@ -20,24 +24,14 @@
     display: flex;
     flex-direction: column;
     gap: .5rem;
-    margin-bottom: 2rem;
-    padding: .5rem;
 }
 
 .project-text {
     /* font-weight: bold; */
 }
-/* .project-container::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: var(--white);
-} */
 
 .project-title {
     display: grid;
-    grid-template-columns: 1fr 6fr;
     justify-items: center;
 }
 
@@ -45,4 +39,55 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+}
+
+.projects-menu {
+    background-color: var(--white);
+    /* background-color: red; */
+}
+
+.projectsMenuAnimation {
+    /* animation: animateProjects 2s forwards ease-in-out; */
+}
+
+.projects-menu {
+    /* background-color: red;
+    clip-path: circle(50% at 50% 50%); */
+    position: relative;
+}
+
+.projects-menu::before {
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    clip-path: circle(50% at 50% 50%);
+    animation: animateProjects 4s forwards ease-in-out;
+}
+
+@keyframes animateProjects {
+    0% {
+        clip-path: inset(0 0 100% 0);
+        background-color: orange;
+    }
+    30% {
+        clip-path: inset(0 0 0 0);
+        background-color: orange;
+    }
+    60% {
+        clip-path: inset(0 0 100% 0);
+        background-color: orange;
+    }
+    80% {
+        clip-path: circle(50% at 50% -50%);
+        background-color: pink;
+    }
+    100% {
+        clip-path: circle(50% at 50% -22%);
+        background-color: pink;
+    }
+}
+
+.project-text {
+    font-size: 5vmin;
 }

@@ -1,14 +1,20 @@
 import React, { useState, useEffect } from 'react';
 
 function Project(props) {
+
+    useEffect(()=>{
+        animateProject();
+    }, [])
+
+    function animateProject() {
+        console.log ("mounted");
+    }
+
     return (
         <>
             <div className="project">
                 <div className="project-container">
                     <div className="project-title">
-                        <p>
-                            {props.id}.
-                        </p>
                         <p className="project-text" style={{textAlign: 'center', whiteSpace: 'pre'}}> 
                             {props.name}
                         </p>

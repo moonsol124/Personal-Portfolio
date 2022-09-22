@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import uniqid from 'uniqid';
 import QuestionBox from './questionBox';
-
 import './css/about.css';
 
 function About() {
@@ -66,7 +65,6 @@ function About() {
                         <span className='packMan-letter' style={{backgroundColor: 'orange', animationDelay: '.15s', transform: 'rotateZ(-15deg)'}}>I</span>
                         <span className='packMan-letter' style={{backgroundColor: 'orange', animationDelay: '.20s'}}>C</span>
                         <span className='packMan-letter' style={{backgroundColor: 'orange', animationDelay: '.25s'}}>K</span>
-                        <span>&nbsp;</span>
                         <span className='packMan-letter' style={{backgroundColor: 'orange', animationDelay: '.30s', transform: 'rotateZ(15deg)'}}>M</span>
                         <span className='packMan-letter' style={{backgroundColor: 'orange', animationDelay: '.35s'}}>E</span>
                         <span className='packMan-letter' style={{backgroundColor: 'orange', animationDelay: '.40s'}}>!</span>
@@ -74,6 +72,7 @@ function About() {
                 </div>
             </div>
             {(qaToggled)? <QuestionBox />:null}
+            {/* <Footer /> */}
         </div>
     )
 }
