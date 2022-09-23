@@ -1,6 +1,6 @@
 function Letter() {
     return(
-        <div>
+        <div className="letter-form-container">
             <form className='letter-container'>
                 <div className="letter-text">
                     Dear Sol,
@@ -17,12 +17,12 @@ function Letter() {
                     </select>
                 </div>
                 <div className="letter-text">
-                    Tonight is a beautiful night with stars shining brighter than ever, but
+                    It's a lonely night with beautiful stars shining in the sky but
                     <label htmlFor="confession-2"></label>
                     <select className="letter-input" id='confession-2'>
                         <option value="0">Confess your love to me...</option>
-                        <option value="1">without your love it means nothing to me</option>
-                        <option value="2">without you it's just a lonely night</option>
+                        <option value="1">without your love that means nothing to me</option>
+                        <option value="2">Even the brightest star wouldn't be brighter than your smile</option>
                     </select>
                 </div>
                 <div className="letter-text">
@@ -30,27 +30,29 @@ function Letter() {
                     <label htmlFor="confession-3"></label>
                     <select className="letter-input" id='confession-3'>
                         <option value="0">Confess your love to me...</option>
-                        <option value="1">When the moon is gone</option>
+                        <option value="1">When the moon goes away</option>
+                        <option value="1">When he feels alone in the middle of a galaxy</option>
                     </select>
                 </div>
                 <div className="letter-text">
-                    And just like a little birds that sings us a sad song,
+                    And just like the little birds that sings us a sad song,
                     <label htmlFor="confession-4"></label>
                     <select className="letter-input" id='confession-4'>
                         <option value="0">Confess your love to me...</option>
-                        <option value="1">My heart breaks every moment that I think of you</option>
+                        <option value="1">My heart breaks with every thought of you</option>
+                        <option value="1">My life is empty without you</option>
                     </select>
                 </div>
                 <div className="letter-text">
-                    So please when you read this letter,
+                    So if you give me just one chance to show you my love
                     <label htmlFor="confession-5"></label>
                     <select className="letter-input" id='confession-5'>
                         <option value="0">Confess your love to me...</option>
-                        <option value="1">Know that I've been waiting for someone like you my whole life</option>
+                        <option value="1">I'd cross the universe just for you</option>
+                        <option value="1">I'll always love you</option>
                     </select>
                 </div>
                 <div className="letter-text">
-                    I love you.
                 </div>
                 <div className="letter-text">
                     Yours, 

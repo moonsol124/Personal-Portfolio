@@ -17,22 +17,23 @@ function Projects() {
 
     return (
         <div className="projects-menu">
-            <div className="about-menu-header" style={{marginTop: '0'}}>
+            <div className="projects-menu-container">
                 <div className="big-letters-container" style={{marginTop: '35vmin'}}>
                     <p className='super-big-letters-about' style={{color: 'rgba(255, 164, 0, 0.5)'}}> PROJECTS</p>
                     <p className="big-letters" style={{zIndex: '1'}}>
                         PROJECTS
                     </p>
                 </div>
-                <div className="projects-menu-container">
-                    {projects.map((project) => {
-                        return (
-                            <Project id={project.id} name={project.name} description={project.description} summary={project.summary} technolgies={project.technolgies} date={project.date} />
-                        )
-                    })}
+                <div className="about-menu-header" style={{marginTop: '0'}}>
+                    <div className="projects-menu-container">
+                        {projects.map((project) => {
+                            return (
+                                <Project id={project.id} name={project.name} description={project.description} summary={project.summary} technolgies={project.technolgies} date={project.date} />
+                            )
+                        })}
+                    </div>
                 </div>
             </div>
-            {/* <Footer /> */}
         </div>
     )
 }

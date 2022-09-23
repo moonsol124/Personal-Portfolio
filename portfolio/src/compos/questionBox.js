@@ -21,9 +21,15 @@ function QuestionBox() {
     }
     return (
         <div className="questionBox">
+            <div className="big-letters-container">
+                <p className='super-big-letters-about' style={{color: 'rgba(255, 164, 0, 0.5)'}}> Questions </p>
+                <p className="big-letters" style={{zIndex: '1'}}>
+                    Questions
+                </p>
+            </div>
             <div className='text-box-1'>
                 <p style={{textAlign: 'end'}} className="about-header-title scroll" id="about">
-                    a little more taste of me
+                    and Answers
                 </p>
                 <div style={{display: 'flex', justifyContent: 'flex-end'}}>
                     <div className="line-right"></div>

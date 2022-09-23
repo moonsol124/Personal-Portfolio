@@ -167,9 +167,9 @@ function Home(props) {
                     }
                   })}  
                 </p>
+                <p className='super-big-letters-projects'> PROJECTS </p>
             </div>
             <div className='text-box-1'>
-              <p className='super-big-letters-projects'> PROJECTS </p>
               <h2 style={{textAlign: 'end'}} className="about-header-title scroll" id="projects">
                 {(Array.from(projectText.string)).map((letter)=>{
                   if (letter === ' ') {

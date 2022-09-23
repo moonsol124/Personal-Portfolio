@@ -43,7 +43,13 @@
 
 .projects-menu {
     background-color: var(--white);
-    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+}
+
+.projects-menu-container {
+    width: 100%;
+    max-width: 1000px;
 }
 
 .projectsMenuAnimation {
@@ -65,28 +71,77 @@
     animation: animateProjects 4s forwards ease-in-out;
 }
 
+/* @media only screen and (min-width: 800px) {
+    @keyframes animateProjects {
+        0% {
+            clip-path: inset(0 0 100% 0);
+            background-color: orange;
+        }
+        30% {
+            clip-path: inset(0 0 0 0);
+            background-color: orange;
+        }
+        60% {
+            clip-path: inset(0 0 100% 0);
+            background-color: orange;
+        }
+        80% {
+            clip-path: circle(50% at 50% -50%);
+            background-color: pink;
+        }
+        100% {
+            clip-path: circle(50% at 50% -22%);
+            background-color: pink;
+        }
+    }    
+}
+@media only screen and (max-width: 800px) {
+    @keyframes animateProjects {
+        0% {
+            clip-path: inset(0 0 100% 0);
+            background-color: orange;
+        }
+        30% {
+            clip-path: inset(0 0 0 0);
+            background-color: orange;
+        }
+        60% {
+            clip-path: inset(0 0 100% 0);
+            background-color: orange;
+        }
+        80% {
+            clip-path: circle(50% at 50% -50%);
+            background-color: pink;
+        }
+        100% {
+            clip-path: circle(50% at 50% -22%);
+            background-color: pink;
+        }
+    }    
+} */
+
 @keyframes animateProjects {
     0% {
-        clip-path: inset(0 0 100% 0);
+        clip-path: inset(0 0 200vmax 0);
         background-color: orange;
     }
     30% {
-        clip-path: inset(0 0 0 0);
+        clip-path: inset(0 0 0vmax 0);
         background-color: orange;
     }
     60% {
-        clip-path: inset(0 0 100% 0);
+        clip-path: inset(0 0 200vmax 0);
         background-color: orange;
     }
     80% {
-        clip-path: circle(50% at 50% -50%);
+        clip-path: circle(100vmax at 50% -100vmax);
         background-color: pink;
     }
     100% {
-        clip-path: circle(50% at 50% -22%);
+        clip-path: circle(100vmax at 50% -70vmax);
         background-color: pink;
     }
-}
+}    
 
 .project-text {
     font-size: 5vmin;

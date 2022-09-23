@@ -6,33 +6,25 @@ function Contact() {
     return (
         <div className='contact-menu'>
             <div className="contact-menu-container">
-                <div className="big-letters-container" style={{marginTop: '35vmin'}}>
+                <div className="big-letters-container">
                     <p className='super-big-letters-about' style={{color: 'rgba(255, 164, 0, 0.5)'}}> CONTACT</p>
-                    <p className="big-letters" style={{zIndex: '1'}}>
+                    <p className="big-letters">
                         CONTACT
                     </p>
                 </div>
-                <div>
-                    <div className='text-box-1'>
-                        <h3 style={{textAlign: 'end', zIndex: '1'}} className="about-header-title" id="about">
-                            Connect with me
-                        </h3>
-                        <div style={{display: 'flex', zIndex: '1', justifyContent: 'flex-end'}}>
-                            <div className="line-right"></div>
-                        </div>
-                    </div>
+                <div className="contact-form-container">
                     <ContactForm />
                 </div>
                 <div>
-                    <div className='text-box-1'>
-                        <h3 style={{textAlign: 'end', zIndex: '1'}} className="about-header-title" id="about">
-                            Shoot me a love letter
-                        </h3>
-                        <div style={{display: 'flex', zIndex: '1', justifyContent: 'flex-end'}}>
-                            <div className="line-right"></div>
-                        </div>
+                    <div className="big-letters-container">
+                        <p className='super-big-letters-about' style={{color: 'rgba(255, 164, 0, 0.5)'}}> Love...</p>
+                        <p className="big-letters">
+                            Love Letter
+                        </p>
                     </div>
-                    <Letter />
+                    <div>
+                        <Letter />
+                    </div>
                 </div>
             </div>
         </div>

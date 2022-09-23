@@ -28,13 +28,13 @@ function About() {
 
     return (
         <div className="about-menu">
+            <div className="big-letters-container" style={{'width': '100%', maxWidth: '1000px'}}>
+                <p className='super-big-letters-about' style={{color: 'rgba(255, 164, 0, 0.5)'}}> ABOUT </p>
+                <p className="big-letters" style={{zIndex: '1'}}>
+                    ABOUT
+                </p>
+            </div>
             <div className="about-menu-header">
-                <div className="big-letters-container">
-                    <p className='super-big-letters-about' style={{color: 'rgba(255, 164, 0, 0.5)'}}> ABOUT </p>
-                    <p className="big-letters" style={{zIndex: '1'}}>
-                        ABOUT
-                    </p>
-                </div>
                 <div className="photo"></div>
                 <div className='text-box-1'>
                     <h2 style={{textAlign: 'end'}} className="about-header-title" id="about">

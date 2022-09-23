@@ -30,6 +30,7 @@ function Footer() {
 
   return (
         <div className="contact">
+          <div className="contact-container">
             <div className="contact-title">
                 <h4> Want to get in touch? </h4>
                 <p> ☛ lucas@gmail.com</p>
@@ -39,7 +40,8 @@ function Footer() {
                 <p> Mexico City, Mexico</p>
                 <p> copyright 2022 </p>
             </div>
-            <div className="packMan-div-about">
+          </div>
+          <div className="packMan-div-about">
             <div className="packMan-line-about"></div>
             <div className="packMan" id='contact-packman'></div>
               <div className='packMan-btn-container'>
@@ -53,7 +55,7 @@ function Footer() {
                   <span className='packMan-letter' style={{animationDelay: '.35s'}}>T</span>
                   </button>
               </div>
-            </div>
+          </div>
         </div>
     ) 
 }
