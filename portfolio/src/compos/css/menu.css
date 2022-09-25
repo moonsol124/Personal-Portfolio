@@ -3,7 +3,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    z-index: 2;
+    z-index: 998;
     height: 100vh;
     background-color: white;
     /* background-color: orange; */
@@ -92,6 +92,10 @@
 .letters {
     display: flex;
     color: black;
+}
+
+.letters:hover {
+    transform: scale(1.1);
 }
 
 .showMenu {

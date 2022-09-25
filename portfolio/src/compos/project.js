@@ -20,7 +20,7 @@ function Project(props) {
                             {props.description}
                         </p>
                         <p>
-                            {props.tools}
+                            Built with {props.tools}
                         </p>
                         <div className="project-btns">
                             <a href={props.code} target="_blank" rel="noreferrer"><button className="button">View Code</button></a>

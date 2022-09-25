@@ -6,10 +6,14 @@ import logo from './imgs/logo.png';
 
 function Nav(props) {
     const navigate = useNavigate();
-
+    
+    function handlesLogo() {
+        props.toTop();
+        navigate('/');
+    }
     return (       
         <> 
-            <p className="home-btn" onClick={()=>{navigate('/')}}> NAME </p>
+            <p className="home-btn" onClick={handlesLogo}> SM </p>
             <img src={menu} alt="menu" className="menu-btn" onClick={props.handlesMenuBtn}></img>
         </>
     )

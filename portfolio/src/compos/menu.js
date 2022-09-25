@@ -19,6 +19,12 @@ function Menu(props) {
         }, 1000)
     }
 
+    function handleProjectsBtn() {
+        console.log ("working");
+        props.closesMenu();
+        props.resetProjectsPropsInitialSetting();
+    }
+
     function animateLetters() {
         const divs = document.querySelectorAll('.letters');
         divs.forEach((div) => {
@@ -61,7 +67,7 @@ function Menu(props) {
                     </li>
                     <li className="menu-list">
                         <Link to='/projects'>
-                            <p onClick={props.closesMenu} className="letters" style={{whiteSpace:'pre'}}>
+                            <p onClick={handleProjectsBtn} className="letters" style={{whiteSpace:'pre'}}>
                                 <span className='menu-letter'>P </span>
                                 <span className='menu-letter'>R </span>
                                 <span className='menu-letter'>O </span>

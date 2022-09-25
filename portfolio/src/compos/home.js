@@ -12,10 +12,10 @@ import { useNavigate, Link } from "react-router-dom";
 function Home(props) {
   const navigate = useNavigate();
   const aboutHeader = {'string': 'ABOUT', 'count': 0};
-  const aboutText = {'string': 'some text', 'count': 0};
-  const projectText = {'string': 'some text', 'count': 0};
+  const aboutText = {'string': 'Kimchi Cheese Burrito.. oh Yeah.', 'count': 0};
+  const projectText = {'string': "Here we go!", 'count': 0};
   const projectsHeader = {'string': 'PROJECTS', 'count': 0};
-  const headerTitle = {'string': 'Chocolate', 'count': 0};
+  const headerTitle = {'string': "Sol Moon", 'count': 0};
 
   useEffect(()=>{
     animateHeader();
@@ -28,7 +28,7 @@ function Home(props) {
   function animateHeader() {
     const headerTitle = Array.from((document.getElementById('header-title')).children);
     setInterval(() => {
-      for (let i = 0; i < 3; i++) {
+      for (let i = 0; i < 1; i++) {
         const randomInt = Math.floor(Math.random() * headerTitle.length);
         const span = headerTitle[randomInt];
         span.classList.add('shakeLetter');
@@ -36,7 +36,7 @@ function Home(props) {
           headerTitle[randomInt].classList.remove('shakeLetter');
         }, 300)
       }
-    }, 3000)
+    }, 1000)
   }
 
   function handlesPackman(e) {
@@ -52,20 +52,25 @@ function Home(props) {
     }, 1000);
   }
 
+  function handleProjectsButton() {
+    props.toTop();
+    props.resetProjectsPropsInitialSetting();
+  }
+
   return (
     <div className="home">
       <div className="header">
         <div className='header-title'>
           <div className="big-letters-container-home">
             <ul className="big-letters-container-home-ul">
-              <li> <p className="neon">HI</p></li>
-              <li> <p className="neon">HOLA</p></li>
-              <li> <p className="neon">HOI</p></li>
+              <li> <p className="neon">Welcome</p></li>
+              <li> <p className="neon">Bienvenido</p></li>
+              <li> <p className="neon">Welkom</p></li>
               <li> <p className="neon">ANNYEONG</p></li>
             </ul>
           </div>
           <div>
-            <h2 style={{width: '100%', whiteSpace:'pre', display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-end'}} id="header-title"> 
+            <h2 className="header-h2" id="header-title"> 
             {(Array.from(headerTitle.string)).map((letter)=>{
                   if (letter === ' ') {
                     return <span> &nbsp; </span>
@@ -78,11 +83,11 @@ function Home(props) {
             </h2>
           </div>
           <div className='text-box-2'>
-            <div style={{display: 'flex', justifyContent: 'flex-start'}}>
+            <div className='right-line-container'>
               <div className="line-right"></div>
             </div>
             <p>
-              Hi, My name is Lucas. I'm a full-stack web developer.
+              Yup, that's me! Welcome to my personal portfolio.
             </p>
           </div>
         </div>
@@ -98,46 +103,49 @@ function Home(props) {
             <p className="big-letters scroll">
               {(Array.from(aboutHeader.string)).map((letter)=>{
                   if (letter === ' ') {
-                    return <span style={{ visibility: 'hidden'}}> &nbsp; </span>
+                    return <span className="hide-span-to-animate"> &nbsp; </span>
                   } 
                   else {
                     aboutHeader.count = increaseCount(aboutHeader);
-                    return <span style={{ visibility: 'hidden', animationDelay: `${aboutHeader.count}s`}}> {letter} </span>  
+                    return <span style={{ visibility: "hidden", animationDelay: `${aboutHeader.count}s`}}> {letter} </span>  
                   }
               })}  
             </p>
           </div>
             <div className='text-box-1'>
-              <h2 style={{textAlign: 'end'}} className="about-header-title scroll" id="about">
+              <h3 className="text-at-the-end about-header-title scroll" id="about">
                 {(Array.from(aboutText.string)).map((letter)=>{
                   if (letter === ' ') {
-                    return <span style={{ visibility: 'hidden'}}> &nbsp; </span>
+                    return <span className="hide-span-to-animate"> &nbsp; </span>
                   } 
                   else {
                     aboutText.count = increaseCount(aboutText);
-                    return <span style={{ visibility: 'hidden', animationDelay: `${aboutText.count}s`}}> {letter} </span>  
+                    return <span style={{ visibility: "hidden", animationDelay: `${aboutText.count}s`}}> {letter} </span>  
                   }
                 })}  
-              </h2>
-              <div style={{display: 'flex', justifyContent: 'flex-end'}}>
+              </h3>
+              <div className='left-line-container'>
                 <div className="line-right"></div>
               </div>
             </div>
             <div className='text-box-2'>
-              <div style={{display: 'flex', justifyContent: 'flex-start'}}>
+              <div className="right-line-container">
                 <div className="line-right"></div>
               </div>
-              <p className='about-main-text scroll' data-animation='clipPath'>
-                How did I end up here? I thought that we were going to Germany. 
-                But somehow the train stopped working and we had to get off.
-                We walked through the forest, rivers and mountains and we survived!
-              </p>
+              <div className='about-main-text scroll' data-animation='clipPath'>
+                <p>Have you ever tried a Korean Kimchi and wondered what it'd be like to have a fantastic Kimchi BBQ Burrito combo? </p>
+                <p> &nbsp;</p>
+                <p>The two totally different but delightful flavors combined together to turn themselves beautifully into an art...</p>
+                <p> &nbsp;</p>
+                <p>...and Yes. I'm talking about me. And if you want to make it even better, I can put some Gouda cheese on it!</p>
+              </div>
             </div>
           </div>
           <div className="packMan-div">
               <div className="packMan-line"></div>
               <div className="packMan"></div>
               <div className='packMan-btn-container'>
+                <p className="packMan-small-text small-text"> Want to get to know more about me? then, </p>
                 <button className='packMan-btn' onClick={handlesPackman}> 
                   <span className='packMan-letter' style={{animationDelay: '.05s', transform: 'rotateZ(15deg)'}}>C</span>
                   <span className='packMan-letter' style={{animationDelay: '.1s'}}>L</span>
@@ -158,7 +166,7 @@ function Home(props) {
         <div className="projects-container">
           <div className="projects-title">
             <div className="big-letters-container">
-                <p className="big-letters scroll" style={{zIndex: '2'}}>
+                <p className="big-letters scroll">
                   {(Array.from(projectsHeader.string)).map((letter)=>{
                     if (letter === ' ') {
                       return <span style={{ visibility: 'hidden'}}> &nbsp; </span>
@@ -172,7 +180,7 @@ function Home(props) {
                 <p className='super-big-letters-projects'> PROJECTS </p>
             </div>
             <div className='text-box-1'>
-              <h2 style={{textAlign: 'end'}} className="about-header-title scroll" id="projects">
+              <h3 style={{textAlign: 'end'}} className="about-header-title scroll" id="projects">
                 {(Array.from(projectText.string)).map((letter)=>{
                   if (letter === ' ') {
                     return <span style={{ visibility: 'hidden'}}> &nbsp; </span>
@@ -182,8 +190,8 @@ function Home(props) {
                     return <span style={{ visibility: 'hidden', animationDelay: `${projectText.count}s`}}> {letter} </span>
                   }
                 })}   
-              </h2>
-              <div style={{display: 'flex', justifyContent: 'flex-end'}}>
+              </h3>
+              <div className='left-line-container'>
                 <div className="line-right"></div>
               </div>
             </div>
@@ -192,7 +200,7 @@ function Home(props) {
           <div className="carousel-outer-container">
             <Carousel projectsProps={props.projectsProps}/>
             <div className="projects-btn-group">
-              <Link to='/projects'><button className='button' onClick={props.toTop}> VIEW ALL PROJECTS </button></Link>
+              <Link to='/projects'><button className='button' onClick={handleProjectsButton}> VIEW ALL PROJECTS </button></Link>
             </div>
           </div>
           <hr></hr>

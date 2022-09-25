@@ -34,11 +34,11 @@ function Footer(props) {
           <div className="contact-container">
             <div className="contact-title">
                 <h4> Want to get in touch? </h4>
-                <p> ☛ lucas@gmail.com</p>
+                <p> ☛ moonsol124@gmail.com</p>
             </div>
             <div>
-                <p> Lucas Sanchez </p>
-                <p> Mexico City, Mexico</p>
+                <p> Sol Moon </p>
+                <p> Netherlands </p>
                 <p> copyright 2022 </p>
             </div>
           </div>
