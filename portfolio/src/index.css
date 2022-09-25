@@ -33,13 +33,28 @@ a:hover {
 }
 
 .app {
-    /* position: relative; */
     height: 100vh;
     overflow-x: hidden;
+    animation: app-animation 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes app-animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 ul {
     list-style-type: none;
+}
+
+a {
+    font-family: loveGlitch;
+    color: white;
 }
 
 .button {

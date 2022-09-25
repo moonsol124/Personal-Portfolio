@@ -36,10 +36,7 @@ function Menu(props) {
     return (
         <div className="menu">
             <div className='menu-container'>
-                <div className="big-letters-container" style={{padding: '.5rem'}}>
-                    <p className='super-big-letters-menu'> MENU </p>
-                    <p className="big-letters-menu">MENU</p>
-                </div>
+                <p className='super-big-letters-menu'> MENU </p>
                 <ul className='menu-ul'>
                     <li className="menu-list">
                         <Link to='/'>

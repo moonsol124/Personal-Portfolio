@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from "react-router-dom";
 import uniqid from 'uniqid';
 import QuestionBox from './questionBox';
 import './css/about.css';
 
-function About() {
+function About(props) {
     const [qaToggled, setQaToggled] = useState(false);
 
     useEffect(() => {
         animateAboutHeader();
-    })
+    }, [])
+
     function handlesPackman(e) {
         const packman = document.getElementById('packman-menu-about');
         packman.classList.add('animatePackman');
@@ -25,7 +27,7 @@ function About() {
         const about = document.querySelector('.about-menu-header');
         about.classList.add('header-appears');
     }
-
+    
     return (
         <div className="about-menu">
             <div className="big-letters-container" style={{'width': '100%', maxWidth: '1000px'}}>

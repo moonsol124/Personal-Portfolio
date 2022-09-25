@@ -50,18 +50,8 @@
     gap: 1rem;
     visibility: hidden;
     position: relative;
-    /* background-color: red; */
-}
-
-@media only screen and (min-width: 800px) {
-    .about-menu-header {
-        max-width: 1000px;
-        width: 100%;
-    }
-    .questionBox {
-        max-width: 1000px;
-        width: 100%;
-    }
+    max-width: 1000px;
+    width: 100%;
 }
 
 .about-menu-header::before {
@@ -87,8 +77,9 @@
     justify-content: center;
     gap: 1rem;
     z-index: 1;
-    /* margin-bottom: 15vmin; */
     position: relative;
+    max-width: 1000px;
+    width: 100%;
 }
 
 .questions {

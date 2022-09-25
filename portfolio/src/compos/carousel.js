@@ -5,16 +5,22 @@ import { Carousel } from 'react-responsive-carousel';
 import './css/carousel.css';
 import CarouselItem from './carouselItem';
 import uniqid from 'uniqid';
+import memoryCard from './imgs/memoryCard.gif';
+import sketch from './imgs/sketch.gif';
+import shoppingCart from './imgs/shoppingCart.gif';
+import restaurantPage from './imgs/restaurantPage.gif';
+import resumeBuilder from './imgs/resumeBuilder.gif';
+import weatherApp from './imgs/weatherApp.gif';
+import battleShip from './imgs/battleShip.gif';
 
-function Carousels() {
-    const [imgs, setImgs] = useState([{'img': 'https://images.pexels.com/photos/2245436/pexels-photo-2245436.png?auto=compress&cs=tinysrgb&w=400'},
-{'img': 'https://images.pexels.com/photos/3889855/pexels-photo-3889855.jpeg?auto=compress&cs=tinysrgb&w=400'},
-{'img': 'https://images.pexels.com/photos/4553618/pexels-photo-4553618.jpeg?auto=compress&cs=tinysrgb&w=400'}])
+function Carousels(props) {
+    useEffect(() => {
+    }, [])
     
     return(
-        <Carousel showThumbs={false} autoPlay={true} dynamicHeight={true} infiniteLoop={true} preventMovementUntilSwipeScrollTolerance={true}>
-            {imgs.map((item) => {
-                return <CarouselItem key={uniqid()} img={item.img}/>
+        <Carousel showThumbs={false} dynamicHeight={false} showIndicators={false} autoPlay={true} interval={8000} infiniteLoop={true} preventMovementUntilSwipeScrollTolerance={true}>
+            {props.projectsProps.map((item) => {
+                return <CarouselItem key={uniqid()} img={item.img} title={item.title} live={item.live} code={item.code}/>
             })}
         </Carousel>
     )

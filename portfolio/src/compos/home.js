@@ -7,7 +7,7 @@ import bg3 from './imgs/bg3.gif'
 import bg4 from './imgs/bg4.gif'
 import Carousel from './carousel';
 import Text from './text';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function Home(props) {
   const navigate = useNavigate();
@@ -47,6 +47,7 @@ function Home(props) {
       letter.classList.add('hideLetter');
     })
     setTimeout(() => {
+      props.toTop();
       navigate('/about');
     }, 1000);
   }
@@ -138,14 +139,15 @@ function Home(props) {
               <div className="packMan"></div>
               <div className='packMan-btn-container'>
                 <button className='packMan-btn' onClick={handlesPackman}> 
-                  <span className='packMan-letter' style={{animationDelay: '.05s', transform: 'rotateZ(15deg)'}}>S</span>
-                  <span className='packMan-letter' style={{animationDelay: '.1s'}}>E</span>
-                  <span className='packMan-letter' style={{animationDelay: '.15s'}}>E</span>
+                  <span className='packMan-letter' style={{animationDelay: '.05s', transform: 'rotateZ(15deg)'}}>C</span>
+                  <span className='packMan-letter' style={{animationDelay: '.1s'}}>L</span>
+                  <span className='packMan-letter' style={{animationDelay: '.15s', transform: 'rotateZ(-15deg)'}}>I</span>
                   {/* <span>&nbsp;</span> */}
-                  <span className='packMan-letter' style={{animationDelay: '.20s', transform: 'rotateZ(-15deg)'}}>M</span>
-                  <span className='packMan-letter' style={{animationDelay: '.25s'}}>O</span>
-                  <span className='packMan-letter' style={{animationDelay: '.30s', transform: 'rotateZ(15deg)'}}>R</span>
+                  <span className='packMan-letter' style={{animationDelay: '.20s'}}>C</span>
+                  <span className='packMan-letter' style={{animationDelay: '.25s'}}>K</span>
+                  <span className='packMan-letter' style={{animationDelay: '.30s', transform: 'rotateZ(15deg)'}}>M</span>
                   <span className='packMan-letter' style={{animationDelay: '.35s'}}>E</span>
+                  <span className='packMan-letter' style={{animationDelay: '.35s'}}>!</span>
                 </button>
               </div>
             </div>
@@ -156,7 +158,7 @@ function Home(props) {
         <div className="projects-container">
           <div className="projects-title">
             <div className="big-letters-container">
-                <p className="big-letters scroll">
+                <p className="big-letters scroll" style={{zIndex: '2'}}>
                   {(Array.from(projectsHeader.string)).map((letter)=>{
                     if (letter === ' ') {
                       return <span style={{ visibility: 'hidden'}}> &nbsp; </span>
@@ -186,17 +188,15 @@ function Home(props) {
               </div>
             </div>
             </div>
-            <div>
-              <Carousel />
-            </div>
+          </div>
+          <div className="carousel-outer-container">
+            <Carousel projectsProps={props.projectsProps}/>
             <div className="projects-btn-group">
-              <button className='button'> VIEW ALL PROJECTS </button>
+              <Link to='/projects'><button className='button' onClick={props.toTop}> VIEW ALL PROJECTS </button></Link>
             </div>
-            <div className="projects-img-2"></div>
           </div>
           <hr></hr>
         </div>
-        {/* <Footer /> */}
     </div>
   )
 }

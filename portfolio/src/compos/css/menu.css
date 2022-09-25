@@ -55,53 +55,43 @@
 }
 
 @media only screen and (min-width: 800px) {
-    .super-big-letters-menu {
-        margin-left: 15vmax;
-    }
-
-    .big-letters-menu {
-        margin-left: 15vmax;
-    }
-
     @keyframes circlePath {
         0% {
-            clip-path: circle(150vmin at 50% -150vmin)
+            clip-path: circle(150vmax at 50% -150vmax)
         }
         100% {
-            clip-path: circle(150vmin at 50% -85vmin)
+            clip-path: circle(150vmax at 50% -105vmax)
         }
     }
 }
 @media only screen and (max-width: 800px) {
     @keyframes circlePath {
         0% {
-            clip-path: circle(100vmin at 50% -50vmin)
+            clip-path: circle(100vmax at 50% -100vmax)
         }
         100% {
-            clip-path: circle(100vmin at 50% 50vmin)
+            clip-path: circle(100vmax at 50% -20vmax)
         }
     }
 }
 
-
 .super-big-letters-menu {
     position: absolute;
-    top: -35vmin;
+    top: -25vmin;
     font-size: 50vmin;
-    left: -20vmin;
+    left: 0vmin;
     color: rgba(255, 164, 0, .5);
     text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
-    /* margin-left: 15vmin; */
 }
 
 .big-letters-menu {
     position: relative;
     font-weight: bold;
-    /* margin-left: 15vmin; */
 }
 
 .letters {
     display: flex;
+    color: black;
 }
 
 .showMenu {

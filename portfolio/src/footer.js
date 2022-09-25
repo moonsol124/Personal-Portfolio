@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 
-function Footer() {
+function Footer(props) {
   const navigate = useNavigate();
 
   function handlesPackman(e) {
@@ -17,6 +17,7 @@ function Footer() {
       const letters = Array.from(e.target.children);
       letters.forEach((letter) => {
         letter.classList.remove('hideLetter');
+        props.toTop();
       })
     }, 1000);
     setTimeout(() => {

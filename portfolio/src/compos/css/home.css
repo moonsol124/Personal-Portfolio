@@ -140,9 +140,6 @@ img[alt]:after {
     .about {
         background: linear-gradient(orange 0%, orange 100%);
     }
-    .about-title {
-        max-width: 1000px;
-    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -287,6 +284,7 @@ img[alt]:after {
 }
 
 .about-title {
+    max-width: 1000px;
     padding: .5rem;
     flex: 1;
     width: 100%;
@@ -308,15 +306,6 @@ img[alt]:after {
     height: 40vmin;
     background-color: black;
 }
-/* projects */
-
-@media only screen and (min-width: 800px) {
-    .projects-container {
-        max-width: 1000px;
-    }
-}
-@media only screen and (max-width: 800px) {
-}
 
 .projects {
     display: flex;
@@ -325,11 +314,13 @@ img[alt]:after {
     align-items: center;
     background-color: pink;
     padding: 5vmin 0px;
+    gap: 2rem;
 }
 
 .projects-container {
-    /* background-color: red; */
+    max-width: 1000px;
     position: relative;
+    width: 100%;
 }
 
 .projects::before {
@@ -412,7 +403,7 @@ img[alt]:after {
 .big-letters {
     display: flex;
     position: relative;
-    z-index: 2;
+    z-index: 1;
     font-weight: bold;
 }
 
@@ -445,8 +436,7 @@ img[alt]:after {
 .neon {
     font-family: loveGlitch;
     text-shadow: 0 0 5px #ffa500, 
-    0 0 15px #ffa500, 
-    0 0 20px #ff0000;
+    0 0 15px #ffa500; 
     color: var(--white);
 }
 
@@ -631,13 +621,5 @@ img[alt]:after {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-}
-
-@media only screen and (max-width: 800px) {
-
-}
-@media only screen and (min-width: 800px) {
-    .contact-container {
-        max-width: 1000px;
-    }
+    max-width: 1000px;
 }
