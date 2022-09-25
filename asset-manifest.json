@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/solmoon/static/css/main.c5d27f7a.css",
-    "main.js": "/solmoon/static/js/main.90a6391b.js",
-    "static/js/787.1ed0c42c.chunk.js": "/solmoon/static/js/787.1ed0c42c.chunk.js",
-    "static/media/bg2.gif": "/solmoon/static/media/bg2.8b27951c9a0853a373fd.gif",
-    "static/media/foto.jpg": "/solmoon/static/media/foto.f483b7ea5d8ccf6359c4.jpg",
-    "static/media/background.gif": "/solmoon/static/media/background.eca914e1af1778f86907.gif",
-    "static/media/weatherApp.gif": "/solmoon/static/media/weatherApp.8d71b25cd90266e3f72d.gif",
-    "static/media/memoryCard.gif": "/solmoon/static/media/memoryCard.c87f380498e34c91ecb8.gif",
-    "static/media/bg3.gif": "/solmoon/static/media/bg3.aea734509054d6dca626.gif",
-    "static/media/resumeBuilder.gif": "/solmoon/static/media/resumeBuilder.23881fd7e1e8c4a247d4.gif",
-    "static/media/shoppingCart.gif": "/solmoon/static/media/shoppingCart.a8ede8106b9fab608153.gif",
-    "static/media/restaurantPage.gif": "/solmoon/static/media/restaurantPage.779456f5c55726527db6.gif",
-    "static/media/sketch.gif": "/solmoon/static/media/sketch.a763f75874849314abb5.gif",
-    "static/media/LoveGlitchPersonalUseRegular-vmEyA.ttf": "/solmoon/static/media/LoveGlitchPersonalUseRegular-vmEyA.a0ed75520d6601886f24.ttf",
-    "static/media/battleShip.gif": "/solmoon/static/media/battleShip.1da7882ce49868685cd8.gif",
-    "static/media/logo.png": "/solmoon/static/media/logo.ade4d8582c979415c984.png",
-    "static/media/BLMelody-Light.woff2": "/solmoon/static/media/BLMelody-Light.74171bc08e885d20a5a8.woff2",
-    "index.html": "/solmoon/index.html",
-    "main.c5d27f7a.css.map": "/solmoon/static/css/main.c5d27f7a.css.map",
-    "main.90a6391b.js.map": "/solmoon/static/js/main.90a6391b.js.map",
-    "787.1ed0c42c.chunk.js.map": "/solmoon/static/js/787.1ed0c42c.chunk.js.map"
+    "main.css": "/Personal-Portfolio/static/css/main.248a4a4f.css",
+    "main.js": "/Personal-Portfolio/static/js/main.7bd3e67e.js",
+    "static/js/787.1ed0c42c.chunk.js": "/Personal-Portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/bg2.gif": "/Personal-Portfolio/static/media/bg2.8b27951c9a0853a373fd.gif",
+    "static/media/foto.jpg": "/Personal-Portfolio/static/media/foto.f483b7ea5d8ccf6359c4.jpg",
+    "static/media/background.gif": "/Personal-Portfolio/static/media/background.eca914e1af1778f86907.gif",
+    "static/media/weatherApp.gif": "/Personal-Portfolio/static/media/weatherApp.8d71b25cd90266e3f72d.gif",
+    "static/media/memoryCard.gif": "/Personal-Portfolio/static/media/memoryCard.c87f380498e34c91ecb8.gif",
+    "static/media/bg3.gif": "/Personal-Portfolio/static/media/bg3.aea734509054d6dca626.gif",
+    "static/media/resumeBuilder.gif": "/Personal-Portfolio/static/media/resumeBuilder.23881fd7e1e8c4a247d4.gif",
+    "static/media/shoppingCart.gif": "/Personal-Portfolio/static/media/shoppingCart.a8ede8106b9fab608153.gif",
+    "static/media/restaurantPage.gif": "/Personal-Portfolio/static/media/restaurantPage.779456f5c55726527db6.gif",
+    "static/media/sketch.gif": "/Personal-Portfolio/static/media/sketch.a763f75874849314abb5.gif",
+    "static/media/LoveGlitchPersonalUseRegular-vmEyA.ttf": "/Personal-Portfolio/static/media/LoveGlitchPersonalUseRegular-vmEyA.a0ed75520d6601886f24.ttf",
+    "static/media/battleShip.gif": "/Personal-Portfolio/static/media/battleShip.1da7882ce49868685cd8.gif",
+    "static/media/logo.png": "/Personal-Portfolio/static/media/logo.ade4d8582c979415c984.png",
+    "static/media/BLMelody-Light.woff2": "/Personal-Portfolio/static/media/BLMelody-Light.74171bc08e885d20a5a8.woff2",
+    "index.html": "/Personal-Portfolio/index.html",
+    "main.248a4a4f.css.map": "/Personal-Portfolio/static/css/main.248a4a4f.css.map",
+    "main.7bd3e67e.js.map": "/Personal-Portfolio/static/js/main.7bd3e67e.js.map",
+    "787.1ed0c42c.chunk.js.map": "/Personal-Portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c5d27f7a.css",
-    "static/js/main.90a6391b.js"
+    "static/css/main.248a4a4f.css",
+    "static/js/main.7bd3e67e.js"
   ]
 }
