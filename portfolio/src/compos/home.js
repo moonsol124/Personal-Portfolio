@@ -1,13 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './css/home.css';
-import Project from './project';
-import bg1 from './imgs/background.gif'
-import bg2 from './imgs/bg2.gif'
-import bg3 from './imgs/bg3.gif'
-import bg4 from './imgs/bg4.gif'
 import Carousel from './carousel';
-import Text from './text';
 import { useNavigate, Link } from "react-router-dom";
+import uniqid from 'uniqid';
 
 function Home(props) {
   const navigate = useNavigate();
@@ -48,7 +43,7 @@ function Home(props) {
     })
     setTimeout(() => {
       props.toTop();
-      navigate('/about');
+      navigate('/Personal-Portfolio/about');
     }, 1000);
   }
 
@@ -73,11 +68,11 @@ function Home(props) {
             <h2 className="header-h2" id="header-title"> 
             {(Array.from(headerTitle.string)).map((letter)=>{
                   if (letter === ' ') {
-                    return <span> &nbsp; </span>
+                    return <span key={uniqid()}> &nbsp; </span>
                   } 
                   else {
                     headerTitle.count = increaseCount(headerTitle);
-                    return <span> {letter} </span>  
+                    return <span key={uniqid()}> {letter} </span>  
                   }
               })}  
             </h2>
@@ -103,11 +98,11 @@ function Home(props) {
             <p className="big-letters scroll">
               {(Array.from(aboutHeader.string)).map((letter)=>{
                   if (letter === ' ') {
-                    return <span className="hide-span-to-animate"> &nbsp; </span>
+                    return <span key={uniqid()} className="hide-span-to-animate"> &nbsp; </span>
                   } 
                   else {
                     aboutHeader.count = increaseCount(aboutHeader);
-                    return <span style={{ visibility: "hidden", animationDelay: `${aboutHeader.count}s`}}> {letter} </span>  
+                    return <span key={uniqid()} style={{ visibility: "hidden", animationDelay: `${aboutHeader.count}s`}}> {letter} </span>  
                   }
               })}  
             </p>
@@ -116,11 +111,11 @@ function Home(props) {
               <h3 className="text-at-the-end about-header-title scroll" id="about">
                 {(Array.from(aboutText.string)).map((letter)=>{
                   if (letter === ' ') {
-                    return <span className="hide-span-to-animate"> &nbsp; </span>
+                    return <span key={uniqid()} className="hide-span-to-animate"> &nbsp; </span>
                   } 
                   else {
                     aboutText.count = increaseCount(aboutText);
-                    return <span style={{ visibility: "hidden", animationDelay: `${aboutText.count}s`}}> {letter} </span>  
+                    return <span key={uniqid()} style={{ visibility: "hidden", animationDelay: `${aboutText.count}s`}}> {letter} </span>  
                   }
                 })}  
               </h3>
@@ -169,11 +164,11 @@ function Home(props) {
                 <p className="big-letters scroll">
                   {(Array.from(projectsHeader.string)).map((letter)=>{
                     if (letter === ' ') {
-                      return <span style={{ visibility: 'hidden'}}> &nbsp; </span>
+                      return <span key={uniqid()} style={{ visibility: 'hidden'}}> &nbsp; </span>
                     } 
                     else {
                       projectsHeader.count = increaseCount(projectsHeader);
-                      return <span style={{ visibility: 'hidden', animationDelay: `${projectsHeader.count}s`}}> {letter} </span>  
+                      return <span key={uniqid()} style={{ visibility: 'hidden', animationDelay: `${projectsHeader.count}s`}}> {letter} </span>  
                     }
                   })}  
                 </p>
@@ -183,11 +178,11 @@ function Home(props) {
               <h3 style={{textAlign: 'end'}} className="about-header-title scroll" id="projects">
                 {(Array.from(projectText.string)).map((letter)=>{
                   if (letter === ' ') {
-                    return <span style={{ visibility: 'hidden'}}> &nbsp; </span>
+                    return <span key={uniqid()} style={{ visibility: 'hidden'}}> &nbsp; </span>
                   } 
                   else {
                     projectText.count = increaseCount(projectText);
-                    return <span style={{ visibility: 'hidden', animationDelay: `${projectText.count}s`}}> {letter} </span>
+                    return <span key={uniqid()} style={{ visibility: 'hidden', animationDelay: `${projectText.count}s`}}> {letter} </span>
                   }
                 })}   
               </h3>
@@ -200,7 +195,7 @@ function Home(props) {
           <div className="carousel-outer-container">
             <Carousel projectsProps={props.projectsProps}/>
             <div className="projects-btn-group">
-              <Link to='/projects'><button className='button' onClick={handleProjectsButton}> VIEW ALL PROJECTS </button></Link>
+              <Link to='/Personal-Portfolio/projects'><button className='button' onClick={handleProjectsButton}> VIEW ALL PROJECTS </button></Link>
             </div>
           </div>
           <hr></hr>

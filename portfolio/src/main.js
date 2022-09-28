@@ -3,7 +3,7 @@ import React, { useEffect, useState} from 'react';
 import Load from './compos/load';
 
 function Main() {
-    const [appLoaded, setAppLoaded] = useState(true);
+    const [appLoaded, setAppLoaded] = useState(false);
 
     useEffect(() => {
 

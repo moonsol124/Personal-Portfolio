@@ -53,7 +53,7 @@ function Projects(props) {
             </div>
             <div className="project-container">
                 {props.projects.map((project) => {
-                    return <Project id={project.id} description={project.description} tools={project.tools} img={project.img} title={project.title} live={project.live} code={project.code}  translateValue={project.translateValue}/>
+                    return <Project key={project.id} id={project.id} description={project.description} tools={project.tools} img={project.img} title={project.title} live={project.live} code={project.code}  translateValue={project.translateValue}/>
                 })}
             </div>
         </div>

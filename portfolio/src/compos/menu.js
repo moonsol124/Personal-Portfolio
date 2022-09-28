@@ -20,7 +20,6 @@ function Menu(props) {
     }
 
     function handleProjectsBtn() {
-        console.log ("working");
         props.closesMenu();
         props.resetProjectsPropsInitialSetting();
     }
@@ -45,7 +44,7 @@ function Menu(props) {
                 <p className='super-big-letters-menu'> MENU </p>
                 <ul className='menu-ul'>
                     <li className="menu-list">
-                        <Link to='/'>
+                        <Link to='/Personal-Portfolio/'>
                             <p onClick={props.closesMenu} className="letters" style={{whiteSpace:'pre'}}>
                                 <span className='menu-letter'>H </span>
                                 <span className='menu-letter'>O </span>
@@ -55,7 +54,7 @@ function Menu(props) {
                         </Link>
                     </li>
                     <li className="menu-list">
-                        <Link to='/about'>
+                        <Link to='/Personal-Portfolio/about'>
                             <p onClick={props.closesMenu} className="letters" style={{whiteSpace:'pre'}}>
                                 <span className='menu-letter'>A </span>
                                 <span className='menu-letter'>B </span>
@@ -66,7 +65,7 @@ function Menu(props) {
                         </Link>
                     </li>
                     <li className="menu-list">
-                        <Link to='/projects'>
+                        <Link to='/Personal-Portfolio/projects'>
                             <p onClick={handleProjectsBtn} className="letters" style={{whiteSpace:'pre'}}>
                                 <span className='menu-letter'>P </span>
                                 <span className='menu-letter'>R </span>
@@ -80,7 +79,7 @@ function Menu(props) {
                         </Link>
                     </li>
                     <li className="menu-list">
-                        <Link to='/contact'>
+                        <Link to='/Personal-Portfolio/contact'>
                             <p onClick={props.closesMenu} className="letters" style={{whiteSpace:'pre'}}>
                                 <span className='menu-letter'>C </span>
                                 <span className='menu-letter'>O </span>

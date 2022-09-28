@@ -22,7 +22,6 @@ function Load(props) {
                 props.loadApp();
             }, 2000)
             const heart = document.querySelector(".heart-container");
-            console.log (heart);
             heart.classList.remove('heart-beat');
             heart.classList.add('heart-animation');
             const percentage = document.querySelector(".load-percentage");

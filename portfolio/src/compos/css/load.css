@@ -10,7 +10,8 @@
     align-items: center;
     flex-direction: column;
     gap: .5rem;
-    /* animation: load-animation 3s forwards ease-in-out; */
+    animation: load-animation 3s forwards ease-in-out;
+    overflow: hidden;
 }
 
 @keyframes appear {

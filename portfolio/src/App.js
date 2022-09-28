@@ -152,10 +152,10 @@ function App() {
             {(menuToggled)?<Menu menuToggled={menuToggled} resetProjectsPropsInitialSetting={resetProjectsPropsInitialSetting} closesMenu={closesMenu}/>:null}
             <Nav handlesMenuBtn={handlesMenuBtn} toTop={toTop}/>
               <Routes>
-                  <Route path='/' element={<Home toTop={toTop} resetProjectsPropsInitialSetting={resetProjectsPropsInitialSetting} projectsProps={projectsProps}/>}></Route>
-                  <Route path='/about' element={<About/>}></Route>
-                  <Route path='/contact' element={<Contact/>}></Route>
-                  <Route path='/projects' element={<Projects projects={projectsProps}/>}></Route>
+                  <Route path='/Personal-Portfolio/' element={<Home toTop={toTop} resetProjectsPropsInitialSetting={resetProjectsPropsInitialSetting} projectsProps={projectsProps}/>}></Route>
+                  <Route path='/Personal-Portfolio/about' element={<About/>}></Route>
+                  <Route path='/Personal-Portfolio/contact' element={<Contact/>}></Route>
+                  <Route path='/Personal-Portfolio/projects' element={<Projects projects={projectsProps}/>}></Route>
               </Routes>
               <Footer toTop={toTop}/>
           </div>
