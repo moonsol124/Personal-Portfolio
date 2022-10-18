@@ -43,7 +43,7 @@ function Home(props) {
     })
     setTimeout(() => {
       props.toTop();
-      navigate('/Personal-Portfolio/about');
+      navigate('/about');
     }, 1000);
   }
 
@@ -195,7 +195,7 @@ function Home(props) {
           <div className="carousel-outer-container">
             <Carousel projectsProps={props.projectsProps}/>
             <div className="projects-btn-group">
-              <Link to='/Personal-Portfolio/projects'><button className='button' onClick={handleProjectsButton}> VIEW ALL PROJECTS </button></Link>
+              <Link to='/projects'><button className='button' onClick={handleProjectsButton}> VIEW ALL PROJECTS </button></Link>
             </div>
           </div>
           <hr></hr>

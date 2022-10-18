@@ -44,7 +44,7 @@ function Menu(props) {
                 <p className='super-big-letters-menu'> MENU </p>
                 <ul className='menu-ul'>
                     <li className="menu-list">
-                        <Link to='/Personal-Portfolio/'>
+                        <Link to='/'>
                             <p onClick={props.closesMenu} className="letters" style={{whiteSpace:'pre'}}>
                                 <span className='menu-letter'>H </span>
                                 <span className='menu-letter'>O </span>
@@ -54,7 +54,7 @@ function Menu(props) {
                         </Link>
                     </li>
                     <li className="menu-list">
-                        <Link to='/Personal-Portfolio/about'>
+                        <Link to='/about'>
                             <p onClick={props.closesMenu} className="letters" style={{whiteSpace:'pre'}}>
                                 <span className='menu-letter'>A </span>
                                 <span className='menu-letter'>B </span>
@@ -65,7 +65,7 @@ function Menu(props) {
                         </Link>
                     </li>
                     <li className="menu-list">
-                        <Link to='/Personal-Portfolio/projects'>
+                        <Link to='/projects'>
                             <p onClick={handleProjectsBtn} className="letters" style={{whiteSpace:'pre'}}>
                                 <span className='menu-letter'>P </span>
                                 <span className='menu-letter'>R </span>
@@ -79,7 +79,7 @@ function Menu(props) {
                         </Link>
                     </li>
                     <li className="menu-list">
-                        <Link to='/Personal-Portfolio/contact'>
+                        <Link to='/contact'>
                             <p onClick={props.closesMenu} className="letters" style={{whiteSpace:'pre'}}>
                                 <span className='menu-letter'>C </span>
                                 <span className='menu-letter'>O </span>

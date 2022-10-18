@@ -12,7 +12,7 @@ function Footer(props) {
       letter.classList.add('hideLetter');
     })
     setTimeout(() => {
-      navigate('/Personal-Portfolio/contact');
+      navigate('/contact');
       packman.classList.remove('animatePackman');
       const letters = Array.from(e.target.children);
       letters.forEach((letter) => {

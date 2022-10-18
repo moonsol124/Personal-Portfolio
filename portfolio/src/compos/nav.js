@@ -9,7 +9,7 @@ function Nav(props) {
     
     function handlesLogo() {
         props.toTop();
-        navigate('/Personal-Portfolio/');
+        navigate('/');
     }
     return (       
         <> 
