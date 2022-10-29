@@ -16,11 +16,11 @@ function Project(props) {
                 <div className='project-description' id={props.id}>
                     <p className="project-title"> {props.title} </p>
                     <div className="project-info">
-                        <p>
+                        <p className="project-description-texts">
                             {props.description}
                         </p>
                         <p>
-                            Built with {props.tools}
+                           <small>Built with {props.tools}</small> 
                         </p>
                         <div className="project-btns">
                             <a href={props.code} target="_blank" rel="noreferrer"><button className="button">View Code</button></a>

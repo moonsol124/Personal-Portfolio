@@ -97,21 +97,11 @@
 @media only screen and (min-width: 800px) {
     .header-img-1 {
         background:linear-gradient(rgba(255, 192, 203, 1) 100%, rgba(255, 192, 203, 1)100%);
-        color: pink;
         background-color: pink;
     }
     .header-img-2 {
         background:linear-gradient(rgba(255, 192, 203, 1) 100%, rgba(255, 192, 203, 1)100%);
     }
-}
-
-@media only screen and (max-width: 800px) {
-    .header-img-1 {
-        content: url('../imgs/background.gif');
-    }
-    .header-img-2 {
-        content: url('../imgs/bg2.gif');
-    }    
 }
 
 img[alt]:after {  
@@ -135,10 +125,8 @@ img[alt]:after {
     height: 50%;
     bottom: 0;
     flex: 1;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     clip-path: circle(80vmax at 50% 90vmax);
+    background-color: pink;
 }
 
 .header-img-2 {
@@ -147,9 +135,7 @@ img[alt]:after {
     height: 50%;
     top: 0;
     flex: 1;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: pink;
     clip-path: circle(80vmax at 50% -70vmax);
 }
 
@@ -168,18 +154,12 @@ img[alt]:after {
 /* about */
 
 @media only screen and (min-width: 800px) {
-    .about {
-        background: linear-gradient(orange 0%, orange 100%);
-    }
     .about::before {
         clip-path: polygon(50% 0%, 83% 12%, 95% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 5% 44%, 17% 12%);
     }
 }
 
 @media only screen and (max-width: 800px) {
-    .about {
-        background-image: url('../imgs/bg3.gif');
-    }
     .about::before {
         clip-path: polygon(49% 5%, 83% 12%, 100% 43%, 94% 78%, 68% 92%, 30% 92%, 6% 78%, 0% 43%, 17% 12%);      
     }
@@ -196,9 +176,7 @@ img[alt]:after {
 }
 
 .about {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: orange;
     padding: 5vmin 0px;
     position: relative;
 }
@@ -273,17 +251,14 @@ img[alt]:after {
 }
 
 @keyframes shake {
-    0% {
+    25% {
         transform: rotateZ(0deg);
     }
-    2% {
-        transform: rotateZ(-15deg)
+    50% {
+        transform: rotateZ(-15deg);
     }
-    4% {
+    75% {
         transform: rotateZ(15deg);
-    }
-    6% {
-        transform: rotateZ(0deg);
     }
     100% {
         transform: rotateZ(0deg);
@@ -302,7 +277,7 @@ img[alt]:after {
 }
 
 .shakeLetter {
-    animation: shake 6s infinite ease-in-out;
+    animation: shake 1s forwards ease-in-out;
 }
 
 .rotate {
@@ -327,8 +302,16 @@ img[alt]:after {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: .5rem;
+    gap: 1rem;
     font-size: 5.5vmin;
+}
+
+.about-header-title {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    font-style: italic;
 }
 
 .about-line-left {
@@ -354,6 +337,7 @@ img[alt]:after {
 }
 
 .projects-container {
+    background-color: pink;
     max-width: 1000px;
     position: relative;
     width: 100%;
@@ -361,11 +345,10 @@ img[alt]:after {
 
 .projects::before {
     content: '';
-    background-color: var(--white);
+    background-color: pink;
     position: absolute;
     width: 100%;
     height: 100%;
-    clip-path: circle(60vmax at -20% 50%);
 }
 
 .test {
@@ -390,7 +373,7 @@ img[alt]:after {
     padding: .5rem;
     position: relative;
     z-index: 1;
-    gap: .5rem;
+    gap: 1rem;
     width: 100%;
     flex-direction: column;
 }

@@ -17,6 +17,10 @@
     background-color: var(--white);
 }
 
+.project-description-texts {
+    font-size: var(--small-texts);
+}
+
 .project-btns {
     display: flex;
     grid-template-columns: repeat(2, 1fr);

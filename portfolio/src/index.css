@@ -25,18 +25,19 @@ a:hover {
 }
 
 :root {
-    font-size: 25px;
+    font-size: 16px;
     /* --pink: #e8a4ac; */
     --pink: pink;
     --white: #FFF6F0;
     --orange: RGB(255, 164, 0);
+    --small-texts: 20px;
 }
 
 .app {
     height: 100vh;
     overflow-x: hidden;
-    animation: app-animation 1s ease-in-out forwards;
-    opacity: 0;
+    /* animation: app-animation .5s ease-in-out forwards;
+    opacity: 0; */
 }
 
 @keyframes app-animation {

@@ -3,35 +3,31 @@ import './css/home.css';
 import Carousel from './carousel';
 import { useNavigate, Link } from "react-router-dom";
 import uniqid from 'uniqid';
+import ProjectsHome from './projects';
+import Project from './project';
 
 function Home(props) {
   const navigate = useNavigate();
-  const aboutHeader = {'string': 'ABOUT', 'count': 0};
-  const aboutText = {'string': 'Kimchi Cheese Burrito.. oh Yeah.', 'count': 0};
-  const projectText = {'string': "Here we go!", 'count': 0};
-  const projectsHeader = {'string': 'PROJECTS', 'count': 0};
+  const aboutText = {'string': 'Kimchi Cheese Burrito', 'count': 0};
+  const projectText = {'string': "See what I'm capable of", 'count': 0};
   const headerTitle = {'string': "Sol Moon", 'count': 0};
+  // const [projects, setProjects] = useState([]);
 
   useEffect(()=>{
-    animateHeader();
+    manageAnimation();
   }, [])
 
   function increaseCount(obj) {
-    return obj.count+.1;
+    return obj.count+.05;
   }
 
-  function animateHeader() {
+  function generateRandInt(word) {
+    return Math.floor(Math.random() * word.length);
+  }
+
+  function manageAnimation() {
     const headerTitle = Array.from((document.getElementById('header-title')).children);
-    setInterval(() => {
-      for (let i = 0; i < 1; i++) {
-        const randomInt = Math.floor(Math.random() * headerTitle.length);
-        const span = headerTitle[randomInt];
-        span.classList.add('shakeLetter');
-        setTimeout(() => {
-          headerTitle[randomInt].classList.remove('shakeLetter');
-        }, 300)
-      }
-    }, 1000)
+    const randomLetter = headerTitle[generateRandInt(headerTitle)];
   }
 
   function handlesPackman(e) {
@@ -96,19 +92,12 @@ function Home(props) {
           <div className="big-letters-container">
             <p className='super-big-letters-about'> ABOUT </p>
             <p className="big-letters scroll">
-              {(Array.from(aboutHeader.string)).map((letter)=>{
-                  if (letter === ' ') {
-                    return <span key={uniqid()} className="hide-span-to-animate"> &nbsp; </span>
-                  } 
-                  else {
-                    aboutHeader.count = increaseCount(aboutHeader);
-                    return <span key={uniqid()} style={{ visibility: "hidden", animationDelay: `${aboutHeader.count}s`}}> {letter} </span>  
-                  }
-              })}  
+              ABOUT
             </p>
           </div>
             <div className='text-box-1'>
               <h3 className="text-at-the-end about-header-title scroll" id="about">
+                {/* Kimch Cheese Burrito... oh yeah. */}
                 {(Array.from(aboutText.string)).map((letter)=>{
                   if (letter === ' ') {
                     return <span key={uniqid()} className="hide-span-to-animate"> &nbsp; </span>
@@ -162,20 +151,12 @@ function Home(props) {
           <div className="projects-title">
             <div className="big-letters-container">
                 <p className="big-letters scroll">
-                  {(Array.from(projectsHeader.string)).map((letter)=>{
-                    if (letter === ' ') {
-                      return <span key={uniqid()} style={{ visibility: 'hidden'}}> &nbsp; </span>
-                    } 
-                    else {
-                      projectsHeader.count = increaseCount(projectsHeader);
-                      return <span key={uniqid()} style={{ visibility: 'hidden', animationDelay: `${projectsHeader.count}s`}}> {letter} </span>  
-                    }
-                  })}  
+                  PROJECTS
                 </p>
                 <p className='super-big-letters-projects'> PROJECTS </p>
             </div>
             <div className='text-box-1'>
-              <h3 style={{textAlign: 'end'}} className="about-header-title scroll" id="projects">
+              <h3 style={{textAlign: 'end'}} className="text-at-the-end about-header-title scroll" id="projects">
                 {(Array.from(projectText.string)).map((letter)=>{
                   if (letter === ' ') {
                     return <span key={uniqid()} style={{ visibility: 'hidden'}}> &nbsp; </span>
@@ -185,17 +166,16 @@ function Home(props) {
                     return <span key={uniqid()} style={{ visibility: 'hidden', animationDelay: `${projectText.count}s`}}> {letter} </span>
                   }
                 })}   
-              </h3>
-              <div className='left-line-container'>
-                <div className="line-right"></div>
+                </h3>
+                  <div className='left-line-container'>
+                    <div className="line-right"></div>
+                  </div>
               </div>
+              <div className="project-container">
+                {props.projects.map((project) => {
+                    return <Project key={project.id} id={project.id} description={project.description} tools={project.tools} img={project.img} title={project.title} live={project.live} code={project.code}  translateValue={project.translateValue}/>
+                })}
             </div>
-            </div>
-          </div>
-          <div className="carousel-outer-container">
-            <Carousel projectsProps={props.projectsProps}/>
-            <div className="projects-btn-group">
-              <Link to='/projects'><button className='button' onClick={handleProjectsButton}> VIEW ALL PROJECTS </button></Link>
             </div>
           </div>
           <hr></hr>

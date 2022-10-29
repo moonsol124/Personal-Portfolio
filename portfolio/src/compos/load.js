@@ -18,16 +18,16 @@ function Load(props) {
             }, 500)
         } 
         else {
-            setTimeout(() => {
-                props.loadApp();
-            }, 2000)
             const heart = document.querySelector(".heart-container");
             heart.classList.remove('heart-beat');
-            heart.classList.add('heart-animation');
-            const percentage = document.querySelector(".load-percentage");
-            setTimeout(() => {
-                percentage.style.visibility = 'hidden';
-            }, 1000)
+            heart.classList.add('make-heart-bigger');
+            heart.addEventListener('animationend', (e) => {
+                const load = document.querySelector('.load');
+                load.classList.add('hide');
+                setTimeout(() => {
+                    props.loadApp();
+                }, 500)
+            })
         }
         
     }, [incrementPercent])

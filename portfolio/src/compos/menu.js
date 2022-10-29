@@ -7,7 +7,6 @@ function Menu(props) {
 
     useEffect(() => {
         animateMenu();
-        animateLetters();
     }, [])
 
     function animateMenu() {
@@ -22,20 +21,6 @@ function Menu(props) {
     function handleProjectsBtn() {
         props.closesMenu();
         props.resetProjectsPropsInitialSetting();
-    }
-
-    function animateLetters() {
-        const divs = document.querySelectorAll('.letters');
-        divs.forEach((div) => {
-            const children = Array.from((div.children));
-            setInterval(() => {
-                const randomInt = Math.floor(Math.random() * children.length);
-                children[randomInt].classList.add('shakeLetter');
-                setTimeout(() => {
-                    children[randomInt].classList.remove('shakeLetter');
-                }, 500)
-            }, 2000)
-        })
     }
 
     return (

@@ -5,9 +5,9 @@ import lockIcon from './imgs/open-padlock.png'
 function Answer(props) {
 
     return (
-        <div className="answer">
+        <li className="answer">
             {props.a}
-        </div>
+        </li>
     )
 }
 
@@ -35,9 +35,9 @@ function Question(props) {
                 }
             </div>
             {(toggled)?
-            <div className="answer-container">
+            <ul className="answer-container">
                 {(props.id === props.curQA)?<Answer a={props.a}/>:null}
-            </div>
+            </ul>
             :null}
         </div>
     )

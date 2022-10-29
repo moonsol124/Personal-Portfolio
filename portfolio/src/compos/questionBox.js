@@ -6,12 +6,9 @@ function QuestionBox() {
     useEffect(()=>{
     }, [])
 
-    const [qa, setQa] = useState([{'id': 1, 'question': 'Where do you live?', 'answer': "I live in the Netherlands. Previously I lived in Mexico, Australia and in South Korea."},
-    {'id': 2, 'question': 'What is your education backgrounds?', 'answer': "I have an unfinished bachelor's degree in International Relations. Now I study IT at a high level vocational school in the Netherlands."},
-    {'id': 3, 'question': 'How much experience do you have in coding?', 'answer': "I started my coding journey back in April, 2022. Mostly following and doing The Odin Project, I've made some very rudiment but functional webpages. For more information, check out the Projects page."},
-    {'id': 4, 'question': 'What languages are you experienced in?', 'answer': 'I have knowledge in Javascript and in the ReactJs framework.'},
-    {'id': 5, 'question': 'Why is there a long career gap in your CV?', 'answer': "I've spent most of my 20's traveling and working odd jobs. I lived in Mexico for about 4 years and one year in Australia. On the top of that, I've done two years of military service in South Korea. That's why I've haven't had a steady, and a long professional career so far."},
-    {'id': 6, 'question': 'Who are you as a person?', 'answer': "As you might have seen already, I'm very friendly and lay back. I'm very communicative, easy to talk and also great in team work."}])
+    const [qa, setQa] = useState([{'id': 1, 'question': 'Where do you live?', 'answer': "I live in the Netherlands. But I'm originally from South Korea."},
+    {'id': 2, 'question': 'What are your hobbies?', 'answer': "I like learning new languages, playing music and adquiring new skills."},
+    {'id': 3, 'question': 'What are your personalities?', 'answer': "I'm very friendly and lovely :)"}])
 
     const [curQA, setCurQA] = useState(0);
 
