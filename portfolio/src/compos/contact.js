@@ -18,7 +18,7 @@ function Contact(props) {
                 <div className="contact-form-container">
                     <ContactForm />
                 </div>
-                <div>
+                {/* <div>
                     <div className="big-letters-container">
                         <p className='super-big-letters-about' style={{color: 'rgba(255, 164, 0, 0.5)'}}> Love...</p>
                         <p className="big-letters">
@@ -28,7 +28,7 @@ function Contact(props) {
                     <div>
                         <Letter />
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )

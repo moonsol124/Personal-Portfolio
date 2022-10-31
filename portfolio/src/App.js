@@ -8,7 +8,6 @@ import Contact from './compos/contact';
 import Projects from './compos/projects';
 import Menu from './compos/menu';
 import Footer from './footer';
-import Test from './compos/test';
 import memoryCard from './compos/imgs/memoryCard.gif';
 import sketch from './compos/imgs/sketch.gif';
 import shoppingCart from './compos/imgs/shoppingCart.gif';
@@ -163,9 +162,8 @@ function App() {
                   <Route path='/about' element={<About/>}></Route>
                   <Route path='/contact' element={<Contact/>}></Route>
                   <Route path='/projects' element={<Projects projects={projectsProps}/>}></Route>
-                  <Route path='/test' element={<Test />}></Route>
               </Routes>
-              <Footer toTop={toTop}/>
+              {/* <Footer toTop={toTop}/> */}
           </div>
         </BrowserRouter>
   )

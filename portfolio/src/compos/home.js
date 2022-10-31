@@ -8,7 +8,7 @@ import Project from './project';
 
 function Home(props) {
   const navigate = useNavigate();
-  const aboutText = {'string': 'Kimchi Cheese Burrito', 'count': 0};
+  const aboutText = {'string': '"Less is more"', 'count': 0};
   const projectText = {'string': "See what I'm capable of", 'count': 0};
   const headerTitle = {'string': "Sol Moon", 'count': 0};
   // const [projects, setProjects] = useState([]);
@@ -18,7 +18,7 @@ function Home(props) {
   }, [])
 
   function increaseCount(obj) {
-    return obj.count+.05;
+    return obj.count+.1;
   }
 
   function generateRandInt(word) {
@@ -49,55 +49,61 @@ function Home(props) {
   }
 
   return (
+    // home main
     <div className="home">
       <div className="header">
         <div className='header-title'>
-          <div className="big-letters-container-home">
+          {/* <div className="big-letters-container-home">
             <ul className="big-letters-container-home-ul">
-              <li> <p className="neon">Welcome</p></li>
-              <li> <p className="neon">Bienvenido</p></li>
-              <li> <p className="neon">Welkom</p></li>
-              <li> <p className="neon">ANNYEONG</p></li>
+              <li><p className="neon">Welcome</p></li>
+              <li><p className="neon">Bienvenido</p></li>
+              <li><p className="neon">Welkom</p></li>
+              <li><p className="neon">ANNYEONG</p></li>
             </ul>
-          </div>
+          </div> */}
           <div>
-            <h2 className="header-h2" id="header-title"> 
-            {(Array.from(headerTitle.string)).map((letter)=>{
-                  if (letter === ' ') {
-                    return <span key={uniqid()}> &nbsp; </span>
-                  } 
-                  else {
-                    headerTitle.count = increaseCount(headerTitle);
-                    return <span key={uniqid()}> {letter} </span>  
-                  }
-              })}  
-            </h2>
+            <h3 className="header-h2" id="header-title"> 
+              S o l 
+              <span> &nbsp; </span>
+              M o o n
+            </h3>
           </div>
-          <div className='text-box-2'>
-            <div className='right-line-container'>
-              <div className="line-right"></div>
-            </div>
-            <p>
-              Yup, that's me! Welcome to my personal portfolio.
+          <div className="thin-hr-container">
+            <div className="thin-hr"></div>
+          </div>
+          <div className='text-center-container'>
+            <p className="typing-erase">
+              <p className="super-big-texts">
+                P
+              </p>
+              <p className="medium-texts">
+                ersonal 
+              </p>
+              <p> &nbsp; </p>
+              <p className="super-big-texts">
+                P
+              </p>
+              <p className="medium-texts">ortfolio
+              </p>
             </p>
           </div>
         </div>
-        <div className="header-img-1"></div>
-        <div className="header-img-2"></div>
       </div>
       <hr></hr>
+      {/* about page */}
       <div className="about">
         <div className="about-container">
           <div className='about-title'>
-          <div className="big-letters-container">
-            <p className='super-big-letters-about'> ABOUT </p>
-            <p className="big-letters scroll">
-              ABOUT
-            </p>
-          </div>
-            <div className='text-box-1'>
-              <h3 className="text-at-the-end about-header-title scroll" id="about">
-                {/* Kimch Cheese Burrito... oh yeah. */}
+            <div>
+              <h2 className="medium-texts">
+                A B O U T
+              </h2>
+            </div>
+            <div className="thin-hr-container">
+              <div className="thin-hr"></div>
+            </div>
+            <div>
+              <p className="medium-texts scroll" id="about">
                 {(Array.from(aboutText.string)).map((letter)=>{
                   if (letter === ' ') {
                     return <span key={uniqid()} className="hide-span-to-animate"> &nbsp; </span>
@@ -107,21 +113,17 @@ function Home(props) {
                     return <span key={uniqid()} style={{ visibility: "hidden", animationDelay: `${aboutText.count}s`}}> {letter} </span>  
                   }
                 })}  
-              </h3>
-              <div className='left-line-container'>
-                <div className="line-right"></div>
-              </div>
+              </p>
             </div>
-            <div className='text-box-2'>
-              <div className="right-line-container">
-                <div className="line-right"></div>
-              </div>
-              <div className='about-main-text scroll' data-animation='clipPath'>
-                <p>Have you ever tried a Korean Kimchi and wondered what it'd be like to have a fantastic Kimchi BBQ Burrito combo? </p>
-                <p> &nbsp;</p>
-                <p>The two totally different but delightful flavors combined together to turn themselves beautifully into an art...</p>
-                <p> &nbsp;</p>
-                <p>...and Yes. I'm talking about me. And if you want to make it even better, I can put some Gouda cheese on it!</p>
+            <div className="text-end-container">
+              <p className="font-style-italic extra-small-texts"> - Mies van der Rohe</p>
+            </div>
+            <div>
+              <div className='container-for-gap-between-texts small-texts scroll' data-animation='clipPath'>
+                <p className="text-center">My mother always told me when I was young, </p>
+                <p className="text-center font-style-italic">"Simpler, Better"</p>
+                <p className="text-center">With that mindset in mind, I try to deliever the simplest but yet the prettiest outcome possible. </p>
+                <p className="text-center">My name is Sol Moon and this is my personal portfolio.</p>
               </div>
             </div>
           </div>
@@ -146,17 +148,18 @@ function Home(props) {
         </div>
       </div> 
       <hr></hr>
+      {/* projects page */}
       <div className="projects">
         <div className="projects-container">
           <div className="projects-title">
-            <div className="big-letters-container">
-                <p className="big-letters scroll">
-                  PROJECTS
-                </p>
-                <p className='super-big-letters-projects'> PROJECTS </p>
+            <h2 className="medium-texts">
+              P R O J E C T S
+            </h2>
+            <div className="thin-hr-container">
+              <div className="thin-hr"></div>
             </div>
-            <div className='text-box-1'>
-              <h3 style={{textAlign: 'end'}} className="text-at-the-end about-header-title scroll" id="projects">
+            <div>
+              <p className="medium-texts scroll" id="projects">
                 {(Array.from(projectText.string)).map((letter)=>{
                   if (letter === ' ') {
                     return <span key={uniqid()} style={{ visibility: 'hidden'}}> &nbsp; </span>
@@ -166,16 +169,13 @@ function Home(props) {
                     return <span key={uniqid()} style={{ visibility: 'hidden', animationDelay: `${projectText.count}s`}}> {letter} </span>
                   }
                 })}   
-                </h3>
-                  <div className='left-line-container'>
-                    <div className="line-right"></div>
-                  </div>
-              </div>
+              </p>
+            </div>
               <div className="project-container">
                 {props.projects.map((project) => {
-                    return <Project key={project.id} id={project.id} description={project.description} tools={project.tools} img={project.img} title={project.title} live={project.live} code={project.code}  translateValue={project.translateValue}/>
+                  return <Project key={project.id} id={project.id} description={project.description} tools={project.tools} img={project.img} title={project.title} live={project.live} code={project.code}  translateValue={project.translateValue}/>
                 })}
-            </div>
+              </div>
             </div>
           </div>
           <hr></hr>

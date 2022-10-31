@@ -30,7 +30,53 @@ a:hover {
     --pink: pink;
     --white: #FFF6F0;
     --orange: RGB(255, 164, 0);
-    --small-texts: 20px;
+    --super-small-texts: 3vmin;
+    --small-texts: 3.5vmin;
+    --medium-texts: 4.5vmin;
+    --big-texts: 6vmin;
+    --super-big-texts: 8vmin;
+    --red: rgb(255, 60, 92);
+}
+
+.super-big-texts {
+    font-size: var(--super-big-texts);
+}
+.big-texts {
+    font-size: var(--big-texts);
+}
+.medium-texts {
+    font-size: var(--medium-texts);
+}
+.small-texts {
+    font-size: var(--small-texts);
+}
+.super-small-texts {
+    font-size: var(--super-small-texts);
+}
+
+.font-style-italic {
+    font-style: italic;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-end {
+    text-align: end;
+}
+
+.text-end-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container-for-gap-between-texts {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .app {

@@ -1,14 +1,15 @@
-import { render } from '@testing-library/react';
-import {React} from 'react';
+import './css/game.css';
+import React, { useState, useEffect } from 'react';
 
-const html = require('./index.html');
-const template = { __html: html };
-
-function Test() {
-    render(
-        <div dangerouslySetInnerHTML={{__html: 'First &middot; Second'}}>
+function Projects(props) {
+    useEffect(() => {
+    }, [])
+    
+    return (
+        <div className="game-container">
+            test
         </div>
     )
 }
 
-export default Test;
+export default Projects;

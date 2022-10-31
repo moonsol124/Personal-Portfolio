@@ -43,6 +43,7 @@
 .projects,
 .contact {
     position: relative;
+    padding: 1rem;
 }
 
 
@@ -55,11 +56,64 @@
     opacity: .08;
 }
 
+.home-title-big {
+    font-size: var(--super-big-texts);
+}
+.home-title {
+    font-size: var(--medium-texts);
+    display: flex;
+    text-align: center;
+}
+
+.home-title-animated {
+    font-size: var(--medium-texts);
+    display: flex;
+    text-align: center;
+    background-color: red;
+    max-width: max-content;
+    width: 0;
+    overflow: hidden;
+}
+
 .header {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: pink;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(white 0%, pink 80%, rgb(255, 166, 181) 100%);
+    background-size: cover;
+}
+
+.typing-erase {
+    /* background-color: red; */
+    display: flex;
+    max-width: max-content;
+    width: 100%;
+    overflow: hidden;
+    border-right: 1px solid black;
+    animation: erase 4s steps(50, end) infinite, blinkCaret .5s step-end infinite;
+}
+  
+@keyframes hide {
+    0% { opacity: 1 }
+    /* 50% { width: 100% } */
+    100% { opacity: 0 }
+}
+
+/* The type and erase effect */
+@keyframes erase {
+    0% { width: 100 }
+    40% { width: 0% }
+    90%, 100% { width: 100 }
+  }
+
+  /* The typewriter cursor effect */
+@keyframes blinkCaret {
+    from, to { border-color: transparent }
+    50% { border-color: black; }
 }
 
 /* header */
@@ -73,35 +127,58 @@
     /* z-index: 1; */
 }
 
+.text-center-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
 .header-title {
     padding: .5rem;
     flex: 1;
     width: 100%;
     display: flex;
-    margin-bottom: 5rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    font-size: 5.5vmin;
 }
 
+.thin-hr-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.thin-hr {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    background: linear-gradient(to right, var(--red) 0%, white 100%);
+    max-width: 55vmin;
+    position: relative;
+}
+
+/* .thin-hr::before {
+    content: '';
+    background-image: url('../imgs/rose.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    /* right: 0;rgb(255, 166, 181)
+    top: -2vmax; */
+
+
 .header-h2 {
+    font-size: var(--medium-texts);
     width: 100%;
     white-space: pre;
     display: flex; 
     flex-wrap: wrap;
     justify-content: flex-end;
-}
-
-@media only screen and (min-width: 800px) {
-    .header-img-1 {
-        background:linear-gradient(rgba(255, 192, 203, 1) 100%, rgba(255, 192, 203, 1)100%);
-        background-color: pink;
-    }
-    .header-img-2 {
-        background:linear-gradient(rgba(255, 192, 203, 1) 100%, rgba(255, 192, 203, 1)100%);
-    }
 }
 
 img[alt]:after {  
@@ -117,26 +194,6 @@ img[alt]:after {
     line-height: 2;  
     text-align: center;
     content: attr(alt);
-}
-
-.header-img-1 {
-    position: absolute;
-    width: 100%;
-    height: 50%;
-    bottom: 0;
-    flex: 1;
-    clip-path: circle(80vmax at 50% 90vmax);
-    background-color: pink;
-}
-
-.header-img-2 {
-    position: absolute;
-    width: 100%;
-    height: 50%;
-    top: 0;
-    flex: 1;
-    background-color: pink;
-    clip-path: circle(80vmax at 50% -70vmax);
 }
 
 .text-box-1 {
@@ -166,7 +223,6 @@ img[alt]:after {
 }
 
 .about-container {
-    z-index: 1;
     width: 100%;
     height: 100%;
     display: flex;
@@ -176,18 +232,20 @@ img[alt]:after {
 }
 
 .about {
-    background-color: orange;
-    padding: 5vmin 0px;
-    position: relative;
+    background-color: pink;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgb(255, 166, 181) 0%, rgb(255, 92, 119) 50%,  rgb(255, 61, 94) 100%);
+    background-size: cover;
 }
 
-.about::before {
+/* .about::before {
     content: '';
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: var(--white);
-}
+} */
 
 .translateX {
     animation: translatesX 1s forwards ease-in-out;
@@ -295,15 +353,19 @@ img[alt]:after {
 }
 
 .about-title {
-    max-width: 1000px;
-    padding: .5rem;
-    flex: 1;
+    height: 100vh;
+    max-width: 500px;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1rem;
-    font-size: 5.5vmin;
+    gap: 2rem;
+    position: relative;
+    align-items: center;
+}
+
+.about-text-p-big {
+    font-size: var(--medium-texts);
 }
 
 .about-header-title {
@@ -312,6 +374,7 @@ img[alt]:after {
     flex-wrap: wrap;
     justify-content: flex-end;
     font-style: italic;
+    font-size: var(--medium-texts);
 }
 
 .about-line-left {
@@ -328,27 +391,19 @@ img[alt]:after {
 
 .projects {
     display: flex;
-    justify-items: center;
-    flex-direction: column;
-    align-items: center;
+    height: 100vh;
+    justify-content: center;
     background-color: pink;
-    padding: 5vmin 0px;
-    gap: 2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgb(255, 61, 94) 0%, pink 80%, white 100%);
+    background-size: cover;
 }
 
 .projects-container {
-    background-color: pink;
     max-width: 1000px;
     position: relative;
     width: 100%;
-}
-
-.projects::before {
-    content: '';
-    background-color: pink;
-    position: absolute;
-    width: 100%;
-    height: 100%;
 }
 
 .test {
@@ -369,13 +424,14 @@ img[alt]:after {
 
 .projects-title {
     display: flex;
-    justify-content: flex-end;
-    padding: .5rem;
+    justify-content: center;
     position: relative;
     z-index: 1;
-    gap: 1rem;
+    gap: 2rem;
     width: 100%;
     flex-direction: column;
+    margin-top: 80px;
+    text-align: center;
 }
 
 .project-img {
@@ -410,7 +466,6 @@ img[alt]:after {
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: .5rem;
     position: relative;
     z-index: 1;
 }
@@ -431,9 +486,8 @@ img[alt]:after {
     font-size: 10vmin;
     position: relative;
     overflow: hidden;
-    height: 10vmin;
-    background-color: orange;
-    padding: 0px 2vmin;
+    height: var(--medium-texts);
+    background-color: pink;
     border-radius: 1rem;
     box-shadow: 0px 0px 5px black;
 }
@@ -454,9 +508,8 @@ img[alt]:after {
 
 .neon {
     font-family: loveGlitch;
-    text-shadow: 0 0 5px #ffa500, 
-    0 0 15px #ffa500; 
-    color: var(--white);
+    color: black;
+    font-size: var(--medium-texts);
 }
 
 @keyframes upAndDown {
@@ -626,7 +679,6 @@ img[alt]:after {
 
 /* contact */
 .contact {
-    padding: .5rem;
     display: flex;
     justify-content: center;
     background-color: orange;
