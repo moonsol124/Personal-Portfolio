@@ -13,7 +13,7 @@ function Nav(props) {
     }
     return (       
         <> 
-            <p className="home-btn" onClick={handlesLogo}><small>Sol Moon</small></p>
+            <p className="home-btn" onClick={handlesLogo}>Sol Moon</p>
             <img src={menu} alt="menu" className="menu-btn" onClick={props.handlesMenuBtn}></img>
         </>
     )

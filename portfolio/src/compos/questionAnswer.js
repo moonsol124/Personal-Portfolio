@@ -6,7 +6,7 @@ function Answer(props) {
 
     return (
         <li className="answer">
-            {props.a}
+            <p className="small-texts">{props.a}</p>
         </li>
     )
 }
@@ -26,8 +26,7 @@ function Question(props) {
     return (
         <div className="questionAnswer">
             <div className="question">
-                <p> {props.id}. </p>
-                <p className="question-p"> {props.q} </p>
+                <p className="small-texts"> {props.q} </p>
                 {(props.id === props.curQA)?null:
                 <div className="question-answer-btn-group">
                     <img src={lockIcon} alt="open" className="lockIcon" onClick={()=>{return opensQuestion(props.id)}}/>

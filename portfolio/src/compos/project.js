@@ -1,3 +1,4 @@
+import '../index.css';
 import React, { useState, useEffect } from 'react';
 
 function Project(props) {
@@ -14,9 +15,9 @@ function Project(props) {
                     </div>
                 </div>
                 <div className='project-description' id={props.id}>
-                    <p className="project-title"> {props.title} </p>
+                    <p className="project-title small-texts"> {props.title} </p>
                     <div className="project-info">
-                        <p className="project-description-texts">
+                        <p className="small-texts">
                             {props.description}
                         </p>
                         <p>

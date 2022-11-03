@@ -6,17 +6,7 @@ function Menu(props) {
     const headerTitle = {'string': 'Chocolate', 'count': 0};
 
     useEffect(() => {
-        animateMenu();
     }, [])
-
-    function animateMenu() {
-        const menu = document.querySelector('.menu');
-        menu.className = 'menu animateMenu';
-        const menuContainer = document.querySelector('.menu-container');
-        setTimeout(() => {
-            menuContainer.classList.add('showMenu');
-        }, 1000)
-    }
 
     function handleProjectsBtn() {
         props.closesMenu();
@@ -26,53 +16,32 @@ function Menu(props) {
     return (
         <div className="menu">
             <div className='menu-container'>
-                <p className='super-big-letters-menu'> MENU </p>
                 <ul className='menu-ul'>
                     <li className="menu-list">
                         <Link to='/'>
-                            <p onClick={props.closesMenu} className="letters" style={{whiteSpace:'pre'}}>
-                                <span className='menu-letter'>H </span>
-                                <span className='menu-letter'>O </span>
-                                <span className='menu-letter'>M </span>
-                                <span className='menu-letter'>E </span>
+                            <p onClick={props.closesMenu} className="letters">
+                                HOME
                             </p>
                         </Link>
                     </li>
                     <li className="menu-list">
                         <Link to='/about'>
-                            <p onClick={props.closesMenu} className="letters" style={{whiteSpace:'pre'}}>
-                                <span className='menu-letter'>A </span>
-                                <span className='menu-letter'>B </span>
-                                <span className='menu-letter'>O </span>
-                                <span className='menu-letter'>U </span>
-                                <span className='menu-letter'>T </span>
+                            <p onClick={props.closesMenu} className="letters">
+                                ABOUT
                             </p>
                         </Link>
                     </li>
                     <li className="menu-list">
                         <Link to='/projects'>
-                            <p onClick={handleProjectsBtn} className="letters" style={{whiteSpace:'pre'}}>
-                                <span className='menu-letter'>P </span>
-                                <span className='menu-letter'>R </span>
-                                <span className='menu-letter'>O </span>
-                                <span className='menu-letter'>J </span>
-                                <span className='menu-letter'>E </span>
-                                <span className='menu-letter'>C </span>
-                                <span className='menu-letter'>T </span>
-                                <span className='menu-letter'>S </span>
+                            <p onClick={handleProjectsBtn} className="letters">
+                                PROJECTS
                             </p>
                         </Link>
                     </li>
                     <li className="menu-list">
                         <Link to='/contact'>
-                            <p onClick={props.closesMenu} className="letters" style={{whiteSpace:'pre'}}>
-                                <span className='menu-letter'>C </span>
-                                <span className='menu-letter'>O </span>
-                                <span className='menu-letter'>N </span>
-                                <span className='menu-letter'>T </span>
-                                <span className='menu-letter'>A </span>
-                                <span className='menu-letter'>C </span>
-                                <span className='menu-letter'>T </span>
+                            <p onClick={props.closesMenu} className="letters">
+                                CONTACT
                             </p>
                         </Link>
                     </li>

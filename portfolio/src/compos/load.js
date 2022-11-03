@@ -5,8 +5,6 @@ function Load(props) {
     const [percent, setPercent] = useState(0);
 
     useEffect(() => {
-        const heart = document.querySelector(".heart-container");
-        heart.classList.add('heart-beat')
         if (percent < 97) {
             setTimeout(() => {
                 incrementPercent();
@@ -18,16 +16,11 @@ function Load(props) {
             }, 500)
         } 
         else {
-            const heart = document.querySelector(".heart-container");
-            heart.classList.remove('heart-beat');
-            heart.classList.add('make-heart-bigger');
-            heart.addEventListener('animationend', (e) => {
-                const load = document.querySelector('.load');
-                load.classList.add('hide');
-                setTimeout(() => {
-                    props.loadApp();
-                }, 500)
-            })
+            const load = document.querySelector('.load');
+            load.classList.add('hide');
+            setTimeout(() => {
+                props.loadApp();
+            }, 1000)
         }
         
     }, [incrementPercent])
@@ -38,10 +31,12 @@ function Load(props) {
     
     return (
         <div className='load'>
-                <div className="heart-container">
-                    <div className="heart">
-                </div>
-            </div>
+            <ul className="loader-list">
+                <li>
+                    {/* <!-- Loader 1--> */}
+                    <div className="loader-5 center"><span></span></div>
+                </li>
+            </ul>
             <div className="load-percentage">
                 {percent}%
             </div>

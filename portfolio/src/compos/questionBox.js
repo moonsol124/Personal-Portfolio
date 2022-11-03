@@ -6,9 +6,12 @@ function QuestionBox() {
     useEffect(()=>{
     }, [])
 
-    const [qa, setQa] = useState([{'id': 1, 'question': 'Where do you live?', 'answer': "I live in the Netherlands. But I'm originally from South Korea."},
-    {'id': 2, 'question': 'What are your hobbies?', 'answer': "I like learning new languages, playing music and adquiring new skills."},
-    {'id': 3, 'question': 'What are your personalities?', 'answer': "I'm very friendly and lovely :)"}])
+    const [qa, setQa] = useState([{'id': 1, 'question': 'Where do you live?', 'answer': "I live in the Netherlands."},
+    {'id': 2, 'question': 'Where are you from?', 'answer': "I'm from South Korea."},
+    {'id': 3, 'question': 'What are your hobbies?', 'answer': "I like learning new languages, playing music and adquiring new skills."},
+    {'id': 4, 'question': 'When did you start programming?', 'answer': "I started back in April 2022 with The Odin Project."},
+    {'id': 5, 'question': 'What languages do you speak?', 'answer': "I speak English, Korean, Spanish and (broken) dutch."},
+    {'id': 6, 'question': 'What are your personalities?', 'answer': "I'm very friendly and lovely :)"}])
 
     const [curQA, setCurQA] = useState(0);
 
@@ -17,19 +20,12 @@ function QuestionBox() {
     }
     return (
         <div className="questionBox">
-            <div className="big-letters-container">
-                <p className='super-big-letters-about' style={{color: 'rgba(255, 164, 0, 0.5)'}}> Questions </p>
-                <p className="big-letters">
-                    Questions
-                </p>
-            </div>
-            <div className='text-box-1'>
-                <p className="text-at-the-end about-header-title scroll" id="about">
-                    and Answers
-                </p>
-                <div className="left-line-container">
-                    <div className="line-right"></div>
+            <div className="container-to-center-texts">
+                <h3 className="medium-texts"> More things about me </h3>
+                <div className="thin-hr-container">
+                    <div className="thin-hr"></div>
                 </div>
+                <p className="small-texts"> Click and find out </p>
             </div>
             <div className='questions'>
                 {qa.map((element)=>{

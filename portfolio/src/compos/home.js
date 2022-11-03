@@ -3,13 +3,12 @@ import './css/home.css';
 import Carousel from './carousel';
 import { useNavigate, Link } from "react-router-dom";
 import uniqid from 'uniqid';
-import ProjectsHome from './projects';
 import Project from './project';
 
 function Home(props) {
   const navigate = useNavigate();
   const aboutText = {'string': '"Less is more"', 'count': 0};
-  const projectText = {'string': "See what I'm capable of", 'count': 0};
+  const projectText = {'string': '"See what I am capable of "', 'count': 0};
   const headerTitle = {'string': "Sol Moon", 'count': 0};
   // const [projects, setProjects] = useState([]);
 
@@ -73,23 +72,22 @@ function Home(props) {
           </div>
           <div className='text-center-container'>
             <p className="typing-erase">
-              <p className="super-big-texts">
+              <span className="super-big-texts">
                 P
-              </p>
-              <p className="medium-texts">
+              </span>
+              <span className="medium-texts">
                 ersonal 
-              </p>
-              <p> &nbsp; </p>
-              <p className="super-big-texts">
+              </span>
+              <span> &nbsp; </span>
+              <span className="super-big-texts">
                 P
-              </p>
-              <p className="medium-texts">ortfolio
-              </p>
+              </span>
+              <span className="medium-texts">ortfolio
+              </span>
             </p>
           </div>
         </div>
       </div>
-      <hr></hr>
       {/* about page */}
       <div className="about">
         <div className="about-container">
@@ -127,27 +125,8 @@ function Home(props) {
               </div>
             </div>
           </div>
-          <div className="packMan-div">
-              <div className="packMan-line"></div>
-              <div className="packMan"></div>
-              <div className='packMan-btn-container'>
-                <p className="packMan-small-text small-text"> Want to get to know more about me? then, </p>
-                <button className='packMan-btn' onClick={handlesPackman}> 
-                  <span className='packMan-letter' style={{animationDelay: '.05s', transform: 'rotateZ(15deg)'}}>C</span>
-                  <span className='packMan-letter' style={{animationDelay: '.1s'}}>L</span>
-                  <span className='packMan-letter' style={{animationDelay: '.15s', transform: 'rotateZ(-15deg)'}}>I</span>
-                  {/* <span>&nbsp;</span> */}
-                  <span className='packMan-letter' style={{animationDelay: '.20s'}}>C</span>
-                  <span className='packMan-letter' style={{animationDelay: '.25s'}}>K</span>
-                  <span className='packMan-letter' style={{animationDelay: '.30s', transform: 'rotateZ(15deg)'}}>M</span>
-                  <span className='packMan-letter' style={{animationDelay: '.35s'}}>E</span>
-                  <span className='packMan-letter' style={{animationDelay: '.35s'}}>!</span>
-                </button>
-              </div>
-            </div>
         </div>
       </div> 
-      <hr></hr>
       {/* projects page */}
       <div className="projects">
         <div className="projects-container">
@@ -171,14 +150,13 @@ function Home(props) {
                 })}   
               </p>
             </div>
-              <div className="project-container">
+              <div>
                 {props.projects.map((project) => {
                   return <Project key={project.id} id={project.id} description={project.description} tools={project.tools} img={project.img} title={project.title} live={project.live} code={project.code}  translateValue={project.translateValue}/>
                 })}
               </div>
             </div>
           </div>
-          <hr></hr>
         </div>
     </div>
   )
