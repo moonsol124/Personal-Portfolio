@@ -16,7 +16,6 @@ function About(props) {
         //     array.push(obj);
         // }
         // setFotos(array);
-
         importAll(require.context('./imgs/1', false, /\.(png|jpe?g|svg)$/));
     }, [])
 

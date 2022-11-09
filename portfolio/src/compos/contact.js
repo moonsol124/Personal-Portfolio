@@ -9,26 +9,17 @@ function Contact(props) {
     return (
         <div className='contact-menu'>
             <div className="contact-menu-container">
-                <div className="big-letters-container">
-                    <p className='super-big-letters-about' style={{color: 'rgba(255, 164, 0, 0.5)'}}> CONTACT</p>
-                    <p className="big-letters">
-                        CONTACT
+                <div className="container-to-center-texts ">
+                    <p>
+                        moonsol124@gmail.com
+                    </p>
+                    <p>
+                        +31620058406
+                    </p>
+                    <p>
+                        Sol Moon
                     </p>
                 </div>
-                <div className="contact-form-container">
-                    <ContactForm />
-                </div>
-                {/* <div>
-                    <div className="big-letters-container">
-                        <p className='super-big-letters-about' style={{color: 'rgba(255, 164, 0, 0.5)'}}> Love...</p>
-                        <p className="big-letters">
-                            Love Letter
-                        </p>
-                    </div>
-                    <div>
-                        <Letter />
-                    </div>
-                </div> */}
             </div>
         </div>
     )

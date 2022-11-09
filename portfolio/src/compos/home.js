@@ -117,11 +117,11 @@ function Home(props) {
               <p className="font-style-italic extra-small-texts"> - Mies van der Rohe</p>
             </div>
             <div>
-              <div className='container-for-gap-between-texts small-texts scroll' data-animation='clipPath'>
-                <p className="text-center">My mother always told me when I was young, </p>
-                <p className="text-center font-style-italic">"Simpler, Better"</p>
-                <p className="text-center">With that mindset in mind, I try to deliever the simplest but yet the prettiest outcome possible. </p>
-                <p className="text-center">My name is Sol Moon and this is my personal portfolio.</p>
+              <div className='container-for-gap-between-texts scroll text-center' data-animation='clipPath'>
+                <p>My mother always told me when I was young, </p>
+                <p className="font-style-italic">"Simpler, Better"</p>
+                <p>With that mindset in mind, I try to deliever the simplest but yet the prettiest outcome possible. </p>
+                <p>My name is Sol Moon and this is my personal portfolio.</p>
               </div>
             </div>
           </div>

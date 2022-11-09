@@ -235,7 +235,7 @@ img[alt]:after {
     background-color: pink;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: linear-gradient(rgb(255, 166, 181) 0%, rgb(255, 92, 119) 50%,  rgb(255, 61, 94) 100%);
+    background-image: linear-gradient(rgb(255, 166, 181) 0%, rgb(255, 121, 143) 50%,  rgb(255, 100, 126) 100%);
     background-size: cover;
 }
 
@@ -396,7 +396,7 @@ img[alt]:after {
     background-color: pink;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: linear-gradient(rgb(255, 61, 94) 20%, rgb(255, 92, 119) 40%,  pink 60%, white 100%);
+    background-image: linear-gradient(rgb(255, 100, 126) 0%, rgb(255, 121, 143) 40%,  pink 60%, white 100%);
     background-size: cover;
 }
 

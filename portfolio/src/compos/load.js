@@ -20,6 +20,8 @@ function Load(props) {
             load.classList.add('hide');
             setTimeout(() => {
                 props.loadApp();
+                const test = sessionStorage.getItem('loaded');
+                console.log (test);
             }, 1000)
         }
         
