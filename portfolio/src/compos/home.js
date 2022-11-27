@@ -117,7 +117,7 @@ function Home(props) {
               <p className="font-style-italic extra-small-texts"> - Mies van der Rohe</p>
             </div>
             <div>
-              <div className='container-for-gap-between-texts scroll text-center' data-animation='clipPath'>
+              <div className='container-for-gap-between-texts scroll text-center' style={{visibility: 'hidden'}} data-animation='clipPath'>
                 <p>My mother always told me when I was young, </p>
                 <p className="font-style-italic">"Simpler, Better"</p>
                 <p>With that mindset in mind, I try to deliever the simplest but yet the prettiest outcome possible. </p>

@@ -20,7 +20,7 @@ import project13 from './imgs/2/project13.png';
 import project14 from './imgs/2/project14.png';
 import project15 from './imgs/2/project15.png';
 import project16 from './imgs/2/project16.png';
-
+import project17 from './imgs/2/project17.png';
 
 function Projects(props) {
     const description = {string: "I started my coding journey with The Odin Project back in April, 2022. It has been a very long journey and I wanted to keep track of each project that I completed in the course. When I look at my previous projects, I can see how much I've progressed in my journey. Below this section, you'll able to see all my previous works. There is still so much to learn and study. But right now in this moment, I'd like to celebrate with you all my hard work.", count: 4};
@@ -45,6 +45,7 @@ function Projects(props) {
         {date: '10.09.2022', id: uniqid(), img: project14, description: "Basic blog with nodejs as backend."},
         {date: '14.10.2022', id: uniqid(), img: project15, description: "Basic restaurant page with flask as backend."},
         {date: '24.10.2022', id: uniqid(), img: project16, description: "Personal Portfolio"},
+        {date: '27.11.2022', id: uniqid(), img: project17, description: "E-commerce"},
     ])
 
     function onScroll() {

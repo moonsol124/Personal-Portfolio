@@ -21,7 +21,6 @@ function Load(props) {
             setTimeout(() => {
                 props.loadApp();
                 const test = sessionStorage.getItem('loaded');
-                console.log (test);
             }, 1000)
         }
         
