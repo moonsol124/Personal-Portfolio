@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4c2878f7.css",
-    "main.js": "/static/js/main.05b05746.js",
+    "main.css": "/static/css/main.a1c67d75.css",
+    "main.js": "/static/js/main.3caceb57.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/e-commerce.gif": "/static/media/e-commerce.6e1af1e6683829491cce.gif",
     "static/media/new_restaurant_page.gif": "/static/media/new_restaurant_page.676f37e4e52551c4aef0.gif",
@@ -26,6 +26,7 @@
     "static/media/sketch.gif": "/static/media/sketch.a763f75874849314abb5.gif",
     "static/media/project8.png": "/static/media/project8.77194ce220bdf280073e.png",
     "static/media/LoveGlitchPersonalUseRegular-vmEyA.ttf": "/static/media/LoveGlitchPersonalUseRegular-vmEyA.a0ed75520d6601886f24.ttf",
+    "static/media/stock-app-clone.gif": "/static/media/stock-app-clone.0a6bc31056a85600c8fb.gif",
     "static/media/project1.png": "/static/media/project1.f4c30526965b39414736.png",
     "static/media/project7.png": "/static/media/project7.9be78486e4b4b25737cb.png",
     "static/media/20220626_220243.jpg": "/static/media/20220626_220243.8fb14ddd588b22e9af4e.jpg",
@@ -105,6 +106,7 @@
     "static/media/20220812_110909.jpg": "/static/media/20220812_110909.ce36bc3b79c626c6fc3a.jpg",
     "static/media/20220212_203132.jpg": "/static/media/20220212_203132.ba8089a6791fd2e43475.jpg",
     "static/media/20210822_174341.jpg": "/static/media/20210822_174341.9bf38b4edc17ab67cdd3.jpg",
+    "static/media/project18.png": "/static/media/project18.33df43ada54a26627a8e.png",
     "static/media/20211111_144634.jpg": "/static/media/20211111_144634.d8c50667cffd347b9193.jpg",
     "static/media/20220811_112556.jpg": "/static/media/20220811_112556.8c7e30d2460719a6e6a8.jpg",
     "static/media/20210822_174406.jpg": "/static/media/20210822_174406.7ad58d49e4a77bbbe356.jpg",
@@ -124,12 +126,12 @@
     "static/media/project5.png": "/static/media/project5.077e8633b01cc24bcf11.png",
     "static/media/BLMelody-Light.woff2": "/static/media/BLMelody-Light.74171bc08e885d20a5a8.woff2",
     "index.html": "/index.html",
-    "main.4c2878f7.css.map": "/static/css/main.4c2878f7.css.map",
-    "main.05b05746.js.map": "/static/js/main.05b05746.js.map",
+    "main.a1c67d75.css.map": "/static/css/main.a1c67d75.css.map",
+    "main.3caceb57.js.map": "/static/js/main.3caceb57.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4c2878f7.css",
-    "static/js/main.05b05746.js"
+    "static/css/main.a1c67d75.css",
+    "static/js/main.3caceb57.js"
   ]
 }
